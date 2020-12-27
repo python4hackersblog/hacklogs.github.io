@@ -1,5 +1,5 @@
-title: 0xkursad Security Blog
-email: 0xkursad@gmail.com
+title: Python4Hackers Blog
+email: python4hackers@protonmail.com
 description: Siber Güvenlik Falan Filan
 url: https://python4hackersblog.github.io
 plugins:
@@ -13,5 +13,5 @@ highlighter: rouge
 paginate: 7
 paginate_path: /page:num/
 twitter:
-    username: 0xkursad
+    username: python4hackers
     card: summary
