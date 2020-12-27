@@ -1,7 +1,7 @@
 title: 0xkursad Security Blog
 email: 0xkursad@gmail.com
 description: Siber Güvenlik Falan Filan
-url: https://0xkursad.github.io
+url: https://python4hackersblog.github.io
 plugins:
     - jekyll-seo-tag
     - jekyll-relative-links
