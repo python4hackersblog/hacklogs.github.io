@@ -1,0 +1,17 @@
+title: Python4Hackers Blog
+email: python4hackers@protonmail.com
+description: Siber Güvenlik Falan Filan
+url: https://python4hackersblog.github.io
+plugins:
+    - jekyll-seo-tag
+    - jekyll-relative-links
+    - jekyll-paginate
+relative_links:
+    enabled: true
+    collections: true
+highlighter: rouge
+paginate: 7
+paginate_path: /page:num/
+twitter:
+    username: python4hackers
+    card: summary
