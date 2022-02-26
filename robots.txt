@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://python4hackersblog.github.io/sitemap.xml
