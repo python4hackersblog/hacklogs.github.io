@@ -24,7 +24,7 @@ Bu konuya neden değinme gereği duydum. Genelde piyasaya baktığımda kısıtl
 Bu bölüm, canlı pasif tarama görevinin genel detaylarına dair bilgileri içerir. Pasif tarama, aslında uygulamada aktif bir değişiklik yapmadan trafiği dinleyip analiz eden bir tarama türüdür.
 </p>
 
-<h3 style="color: yellow;"><i>a. Task type</i></h3><p><h3 style="color: yellow;"><i>a. Task type</i></h3>Bu, Burp Suite'te yürütülmekte olan görevin türünü gösterir. "Live passive crawl" seçeneği, Burp Proxy'den gelen trafiği gerçek zamanlı olarak (crawl) için dinlemek üzere ayarlanmıştır.</p>
+<i style="color: yellow;">a. Task type</i>Bu, Burp Suite'te yürütülmekte olan görevin türünü gösterir. "Live passive crawl" seçeneği, Burp Proxy'den gelen trafiği gerçek zamanlı olarak (crawl) için dinlemek üzere ayarlanmıştır.
 
 <h3 style="color: yellow;"><i>b. Tools scope</i></h3>
 
