@@ -166,3 +166,9 @@ Bu ayarlar, tarama işleminin hedeflenen doğrulukta ve hızda gerçekleştirilm
 Sonuç olarak, Issues Reported bölümü, denetiminizin ne kadar kapsamlı ve ne kadar derinlemesine olacağını özelleştirmenizi sağlar. Genel bir tarama yapmak için tarama tipine göre seçenekleri kullanabilir veya belirli zafiyetler üzerinde yoğunlaşmak için bireysel zafiyet seçeneklerini kullanabilirsiniz.
 
 
+<i style="color: yellow;">c.	Handling Application Errors During Audit:</i> Tarama süreci sırasında karşılaşılan uygulama hatalarının nasıl ele alınacağını kontrol eden ayarlardır. Özellikle büyük web uygulamalarında yüzlerce, hatta binlerce istek yapıldığında, bazen bağlantı hataları veya zaman aşımı gibi sorunlarla karşılaşılabilir. Bu bölümde belirtilen ayarlar, bu gibi sorunlar karşısında Burp Suite'in nasıl tepki vereceğini belirlemenize yardımcı olur. 
+
+Şimdi ayarları detaylı bir şekilde inceleyelim: 
+
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjk_vdrsYDr9i4exBfon9jysYlBtb0-0MPBMwuGyvqZFmpE709agrPid7PTXacY_xvw29p9uTgLevsrT3aR7ryfbhkL9jsWe_LeqryNnTjufHKXFXFqe3eeXSV_CTMGi02aCVvmgLe1SLXL0jJ-Z6R1kORpM8sWw-hTJ38YG7nmh90DUzXkN54a_Wb3quyf/s864/13.png" height="" width="">
