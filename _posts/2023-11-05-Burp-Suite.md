@@ -122,8 +122,47 @@ Evet New diyerek ayarlarımızı açtık ilk  ayarlama yapacağımız bölüm  A
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6LXmiK1Tndcli9LLNuGQ5UzqdHgvU8SBnMuPAsfphk_mCBeG1fDQECJ4PexU8vPmORH0LCKSJ6JpB9xU_AU0GBA9BuWriE5p_fUzII5mBDaGRk6RFkMK73KwTU7ZRs3YqxA9FmloSW6PZnEPcPN8EamjofiAE0tGuXrKgnci7c5XJTap3LgmA4_-1byc-/s878/11.png" height="" width="">
 
+<i style="color: red;">Audit Speed:</i> Bu ayar, denetimin ne kadar hızlı çalışacağını belirtir. Daha hızlı bir tarama, daha az derinlemesine ve kapsamlı olabilirken, daha yavaş bir tarama genellikle daha derinlemesine ve ayrıntılı olur.
+
+<i style="color: red;">Audit Accuracy:</i> Bu, denetimin ne kadar hassas olacağını belirleyen bir ayardır. Daha yüksek hassasiyet, daha az yanıltıcı pozitif sonuç verir, ancak tarama süresi artabilir.
+
+<i style="color: red;">Maximum total crawl and audit time:</i> Bu ayar, tarama ve denetim sürecinin toplamda ne kadar sürmesi gerektiğini belirler. Bu, belirli bir zaman dilimi içinde tarama yapmak istediğinizde kullanışlıdır. Bu ayar, sadece denetim işlemi için yapılan taramalarda uygulanmaz.
+
+<i style="color: red;">Skip checks unlikely to be effective due to insertion point’s base value:</i> Bu seçenek, belirli bir ekleme noktasının temel değeri nedeniyle etkili olması muhtemel olmayan kontrolleri atlamak için kullanılır. Örneğin, sayısal bir değer beklenen bir parametrede SQL enjeksiyonu kontrolü yapmak gibi.
+
+<i style="color: red;">Consolidate frequently occurring passive issues:</i> Bu seçenek, sıkça rastlanan pasif sorunları birleştirmek için kullanılır. Böylece, aynı türden birçok zayıflık için ayrı ayrı bildirimler almak yerine, bu zayıflıklar tek bir bildirimde konsolide edilir.
+
+<i style="color: red;">Automatically maintain sessions:</i> Bu seçenek, tarama sırasında oturumun (session) otomatik olarak sürdürülmesini sağlar. Bu, oturum tabanlı kimlik doğrulamaları olan uygulamalarda kullanışlıdır. Audit-only taramaları için bu seçenek uygulanmaz.
+
+<i style="color: red;">Follow redirections where necessary:</i> Bu seçenek, tarama sırasında gerekli olduğunda yönlendirmeleri (redirections) takip etmeyi sağlar. Bu, uygulamanın farklı sayfalara veya alt domainlere yönlendirme yapması durumunda önemlidir.
 
 
+Bu ayarlar, tarama işleminin hedeflenen doğrulukta ve hızda gerçekleştirilmesini sağlamak için kritik öneme sahiptir. Genellikle, bir denetim sürecinin başlangıcında bu ayarları inceleyerek, denetimin amacına ve hedef uygulamanın özelliklerine uygun şekilde optimize edilmesi önerilir.
 
+
+<i style="color: yellow;">b. Issues Reported:</i> Burp Suite'in tarama sırasında hangi güvenlik zafiyetlerini kontrol edeceği ile ilgili ayarları içerir. Bu ayarları özelleştirerek, denetiminizin ne kadar derinlemesine ve ne kadar geniş kapsamlı olacağını kontrol edebilirsiniz. 
+
+Şimdi bu ayarları ayrıntılı bir şekilde inceleyelim:
+
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlM6-0VMs54PXBs3CqGCfJPiCNN7AVNjYX_bwsphUOSFLnT7xRyDeSXNPmhBuiyBBoXtEXuFoEdwHEFdSjGJkMNe5xLlmxmHm6i3kxiBhkmpnhSV926rTMCQVd8LX_ypfEcs_ucuCRBCy1Fg7-0zdtSdoANiqhtldXyZQwzZdbsjr1F1jkx884D3eKnC91/s864/12.png" height="400" width="600">
+
+<i style="color: red;">Select by scan type:</i> Bu seçenek, tarama tipine göre zafiyetleri kontrol etmek isteyip istemediğinizi belirtir. Aşağıda listelenen farklı tarama tipleri bulunmaktadır:
+
+
+<i style="color: red;">&nbsp;&nbsp;&nbsp;• Passive:</i> Bu tarama türü, trafik üzerinde değişiklik yapmadan, sadece trafiği dinleyerek (passively) zafiyetleri tespit eder. Örneğin, güvensiz içerik karışımı, cookie'lerde güvenlik bayrağının eksik olması gibi zafiyetler bu yöntemle tespit edilebilir.
+
+<i style="color: red;">&nbsp;&nbsp;&nbsp;• Light active:</i> Bu tarama, hedef uygulamaya çok hafif etkili aktif istekler gönderir. Bu, daha az tespit yöntemiyle hızlı bir tarama yapar ve genellikle uygulamaya minimum etki yapar.
+
+<i style="color: red;">&nbsp;&nbsp;&nbsp;• Medium active:</i> Bu, Light taramasından biraz daha ayrıntılıdır ve hedef uygulamaya daha fazla aktif istek gönderir. Bu, daha derinlemesine bir tarama yapar fakat daha fazla sistem kaynağı kullanabilir.
+
+<i style="color: red;">&nbsp;&nbsp;&nbsp;• Intrusive active:</i> Bu tarama türü, potansiyel olarak hedef uygulamaya zarar verebilecek derinlemesine testler yapar. Örneğin, SQL Enjeksiyonu veya DOS atakları gibi saldırıları simüle edebilir. Bu tarama tipi kullanılırken dikkatli olunmalıdır.
+
+<i style="color: red;">&nbsp;&nbsp;&nbsp;• JavaScript analysis: </i> Bu tarama, web uygulamalarında sıkça bulunan JavaScript zafiyetlerini analiz etmek için kullanılır.
+
+
+<i style="color: red;">Select individual issues:</i> Bu seçenek, Burp Suite'in hangi zafiyetleri kontrol edeceğini tek tek belirlemenize olanak tanır. Özellikle belli bir zafiyet türü hakkında bilgi almak istiyorsanız bu seçenek kullanılır. Ayrıca, bu seçenekte belirli bir zafiyet türü için kullanılacak tespit yöntemlerini de belirleyebilirsiniz.
+
+Sonuç olarak, Issues Reported bölümü, denetiminizin ne kadar kapsamlı ve ne kadar derinlemesine olacağını özelleştirmenizi sağlar. Genel bir tarama yapmak için tarama tipine göre seçenekleri kullanabilir veya belirli zafiyetler üzerinde yoğunlaşmak için bireysel zafiyet seçeneklerini kullanabilirsiniz.
 
 
