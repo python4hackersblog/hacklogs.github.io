@@ -63,7 +63,7 @@ Bu kısım, özelleştirilmiş tarama yapılandırmalarını oluşturmanıza, d�
 **This type of live task analyses HTTP messages...:** Bu cümle, canlı pasif crawl görevinin, HTTP mesajlarını analiz ederek Target site map’e girişler eklediğini belirtir. Burada amaç, HTTP trafiğini dinleyerek web uygulamasının yapısını ve içeriğini otomatik olarak keşfetmektir.
 
 
-<i style="color: yellow;">a. Types of items to add: </i> Bu bölüm, site haritasına hangi öğe türlerinin eklenmesi gerektiğini belirtir.
+<i style="color: yellow;">a. Types of items to add: </i> Bu bölüm, site haritasına hangi öğe türlerinin eklenmesi gerektiğini belirtir.      
 
 <i style="color: red;">• Links:</i> Web sayfalarında bulunan bağlantıları temsil eder. Bu, başka sayfalara veya kaynaklara yönlendiren URL'leri ifade eder.
 
@@ -104,10 +104,23 @@ Bu özellik, manuel olarak her bir işlevi test eden bir sızma testi uzmanı i�
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsQ9s-mhKNxC3ujVxAktx4mBL-GhQIr4R-glaMtDpiLMJvE2sfZYQNIMTUUGgwVEbyWn4FK-eoQNCHps08cS_7cUcUvsaN6Ca9MbmUBA8w808vhQWbE-07y7ZOeO73YNQFV_ChSnYQhnWxVFwXPv-VY4CwRghX9jjywgVdBMTQLqsE55TPQh5zssLQy1Nx/s878/9.png" height="400" width="600">
 
+Scan details kısmı diğeriyle aynı olduğu için o kısmı anlatmadan geçiyoruz.
+
+<h3 style="color:yellow;">1. Scan configuration</h3>
+
+Bu kısım, özelleştirilmiş tarama yapılandırmalarını oluşturmanıza, düzenlemenize ve seçmenize olanak tanır. Bu özellik, belirli bir test senaryosu veya uygulama için özel tarama ayarları oluşturmak istediğinizde oldukça kullanışlıdır.
+
+Şimdi New diyerek  yeni bir ayar yapalım;
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQSbLP_C04GLT68bnitjCFp0bBL73ENsDYVd9DYqcBUJ48ByQWzSakZJ5nAGSoxB3-oQ5yMbk4Y0jcCe8qgGoXwycocQj0Zi1D56djckyiucnvYKdvsZKBmJEMWTdmj4qjSU9Yl9IgeaJS0AHwKxzDU43qrCTq0l7xANte-TBIw90-yyH8Xg0ngMEy7S0J/s885/10.png" height="400" width="600">
+
+Evet New diyerek ayarlarımızı açtık ilk  ayarlama yapacağımız bölüm  Audit Optimization bu bölüm nedir ne değildir inceleyelim.
 
 
+<i style="color: yellow;">a. Audit Optimization: </i> Bu bölüm, denetim (audit) sürecinin nasıl çalışacağına dair bir dizi ayar içerir. Burada, hedef uygulamanın doğası ve denetimin amacına göre denetim mantığının davranışını kontrol edebilirsiniz.
 
 
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6LXmiK1Tndcli9LLNuGQ5UzqdHgvU8SBnMuPAsfphk_mCBeG1fDQECJ4PexU8vPmORH0LCKSJ6JpB9xU_AU0GBA9BuWriE5p_fUzII5mBDaGRk6RFkMK73KwTU7ZRs3YqxA9FmloSW6PZnEPcPN8EamjofiAE0tGuXrKgnci7c5XJTap3LgmA4_-1byc-/s878/11.png" height="400" width="600">
 
 
 
