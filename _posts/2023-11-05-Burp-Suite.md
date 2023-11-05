@@ -16,13 +16,23 @@ Bu konuya neden değinme gereği duydum. Genelde piyasaya baktığımda kısıtl
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfQq8P5bhjHt0hIPI1F1FWPyg3NHTq4hbHoHaHcHNPBKuS749K1iEIPuZN75b4mld60ZlIg4K6nStaI4lZ7sO0aykeDrSuQ0O6sawNEfJaQJtP7spJvqc5Cv25MhY6dI90PXp6kM9W0lHymiNyLxp3vXvgSEcMfigi39RdzF8yQAWwqfP6i8FoyS-Uudip/s320/2.png" height="" width="">
 
-<h3 style="color:yellow;"><i>1. Scan Details</i></h3>
+<h3 style="color:yellow;">1. Scan Details</h3>
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibi4AJVmz5jZSUJkpaypt6r5l9R1dpFVLwxB-Foc7jU6s3lwt9lb-rIHU0sh7rvAFzJ2i2gWnCdWJFZ4mZisbdtGxN0cAOCHaxghcPrqUW601IwBVqiy7uetTenUqQaD37N4uxWk3QCXeT4jAcqxjjsxyYFzNdhxMknc-tVw70OK_lHQC3zieP9WBiislG/s1200/3.png" height="400" width="600">
 
 <p>Şimdi yukarıda da gözükeceği üzere Scan details kısmını inceleyelim ;<br><br>
 Bu bölüm, canlı pasif tarama görevinin genel detaylarına dair bilgileri içerir. Pasif tarama, aslında uygulamada aktif bir değişiklik yapmadan trafiği dinleyip analiz eden bir tarama türüdür.
 </p>
+
+<h3 style="color: yellow;"><i>a. Task type</i></h3><p>Bu, Burp Suite'te yürütülmekte olan görevin türünü gösterir. "Live passive crawl" seçeneği, Burp Proxy'den gelen trafiği gerçek zamanlı olarak (crawl) için dinlemek üzere ayarlanmıştır.</p>
+
+<h3 style="color: yellow;"><i>b. Tools scope</i></h3>
+
+<h3 style="color: yellow;"><i>c. URL scope </i></h3>
+
+<h3 style="color: yellow;"><i>d. Deduplication</i></h3>
+
+
 
 
 
