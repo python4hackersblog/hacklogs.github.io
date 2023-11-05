@@ -91,6 +91,21 @@ Bu özellik, Burp Suite'in en güçlü araçlarından birini, yani otomatik zafi
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQsKGdaKUrrnaFoBjIVjzhtrpdeTM7Nyqaas4P52vquavyZabVLcxATI8v8pN2dzpp2noA6tqtPiV2AL4x1c4SNT28RUAFBjhbRzd5ErymiV4QykzI6tDvuD-Rz2acrPEpM6QlXUvVQDW6giOL-NSHw4UH5fxXa9Om8XY4aukHRCC4wasQ__UCRdOGLIi1/s684/7.png" height="" width="">
 
+Bu özellik ne anlam ifade eder ?
+
+Diyelim ki bir web uygulamasını test ediyorsunuz. Tarayıcınızdan bir sayfaya erişim sağladığınızda veya bir form gönderdiğinizde bu trafiği Burp Suite'in Proxy özelliği sayesinde dinliyorsunuz. Eğer "Live audit from Proxy" aktif ise, bu trafiği dinlerken aynı zamanda bu trafiğin içeriğini analiz edip olası güvenlik açıklıklarını tespit etmeye çalışır.
+
+Bir online alışveriş sitesini düşünelim. Bu sitede bir ürün sepete eklendiğinde bir HTTP isteği gönderiliyor. Bu istek içerisinde "price" adında bir parametre yer alıyor ve bu parametre ürünün fiyatını belirtiyor. "Live audit from Proxy" özelliği, bu tür trafiği analiz ederken, bu "price" parametresinin manipüle edilip edilemeyeceğini, yani fiyatın değiştirilip değiştirilemeyeceğini kontrol eder. Eğer bu parametre ile oynanarak fiyat değiştirilebiliyorsa, bu bir güvenlik açığı olarak raporlanır.
+
+Bu özellik, manuel olarak her bir işlevi test eden bir sızma testi uzmanı için zaman kazandırır. Ancak, otomatik taramaların sonuçları her zaman kesin değildir ve bu nedenle otomatik tarama sonuçlarını teyit etmek için **manuel testlerin** yapılmasını şiddetle öneriyoruz.
+
+Şimdi sağ taraftaki ayar iconundan detaylara bakalım ;
+
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsQ9s-mhKNxC3ujVxAktx4mBL-GhQIr4R-glaMtDpiLMJvE2sfZYQNIMTUUGgwVEbyWn4FK-eoQNCHps08cS_7cUcUvsaN6Ca9MbmUBA8w808vhQWbE-07y7ZOeO73YNQFV_ChSnYQhnWxVFwXPv-VY4CwRghX9jjywgVdBMTQLqsE55TPQh5zssLQy1Nx/s878/9.png" height="400" width="600">
+
+
+
 
 
 
