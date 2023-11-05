@@ -10,3 +10,5 @@ Bu konuya neden değinme gereği duydum. Genelde piyasaya baktığımda kısıtl
 Şimdi **Burp Suite** nedir ne değildir vs gibi konulara değinmek istemiyorum. Zaten bu işlere başlamış kişiler **Burp Suite** hakkında bilgi sahibidirler. Daha çok Burp Suite ekranlarını tanımaya,ayarlamaları yapmaya yönelik bir anlatım olmasını istiyorum...
 <br><br>
 <h1 style="color:yellow;">DASHBOARD EKRANI</h1>
+<h3 style="color:yellow;">A. Live Passive Crawl From Proxy (all traffic)</h3>
+<br><p>
