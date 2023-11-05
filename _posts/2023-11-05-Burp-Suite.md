@@ -11,4 +11,7 @@ Bu konuya neden değinme gereği duydum. Genelde piyasaya baktığımda kısıtl
 <br><br>
 <h1 style="color:yellow;">DASHBOARD EKRANI</h1>
 <h3 style="color:yellow;">A. Live Passive Crawl From Proxy (all traffic)</h3>
-<br><p>
+<p>Bu kısım, Burp Proxy'den gelen tüm trafiği pasif olarak crawl için dinler. Yani, gerçek zamanlı olarak, kullanıcının tarayıcısından geçen trafiği analiz eder ve bu trafiği Burp Suite'in içeriğini keşfetme mekanizmasına yönlendirir. Bu, uygulamada kullanılan URL'leri, parametreleri ve diğer endpoint noktalarını otomatik olarak belirlemek için kullanılır.</p>
+<p>Şimdi Bu kısmın ayarlarına bir göz atalım nedir ne değildir anlamaya çalışalım;</p>
+
+
