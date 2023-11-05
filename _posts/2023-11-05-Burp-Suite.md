@@ -9,4 +9,4 @@ Bu konuya neden değinme gereği duydum. Genelde piyasaya baktığımda kısıtl
 
 Şimdi **Burp Suite** nedir ne değildir vs gibi konulara değinmek istemiyorum. Zaten bu işlere başlamış kişiler **Burp Suite** hakkında bilgi sahibidirler. Daha çok Burp Suite ekranlarını tanımaya,ayarlamaları yapmaya yönelik bir anlatım olmasını istiyorum...
 
-<h3 style="color:yellow;">DASHBOARD EKRANI</h3>
+<h1 style="color:yellow;">DASHBOARD EKRANI</h1>
