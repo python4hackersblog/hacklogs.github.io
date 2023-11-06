@@ -172,3 +172,23 @@ Sonuç olarak, Issues Reported bölümü, denetiminizin ne kadar kapsamlı ve ne
 
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjk_vdrsYDr9i4exBfon9jysYlBtb0-0MPBMwuGyvqZFmpE709agrPid7PTXacY_xvw29p9uTgLevsrT3aR7ryfbhkL9jsWe_LeqryNnTjufHKXFXFqe3eeXSV_CTMGi02aCVvmgLe1SLXL0jJ-Z6R1kORpM8sWw-hTJ38YG7nmh90DUzXkN54a_Wb3quyf/s864/13.png" height="" width="">
+
+<i style="color:#ff4500;">If [2] consecutive audit checks fail, skip remaining checks in the current insertion point: </i>Bu ayar, belirli bir ekleme noktasında (insertion point) art arda belirtilen sayıda (örneğin 2) başarısız denetim kontrolü olması durumunda geriye kalan kontrollerin atlanmasını sağlar. Bu, hedef uygulamanın belirli bir ekleme noktasında sürekli hata vermesi durumunda, gereksiz yere daha fazla istek göndermemek için kullanılır.
+
+<i style="color:#ff4500;">If [2] consecutive insertion points fail, skip remaining insertion points, and flag audit item as failed: </i>Bu ayar, art arda belirtilen sayıda ekleme noktasının başarısız olması durumunda, geriye kalan ekleme noktalarının atlanmasını ve denetim öğesinin başarısız olarak işaretlenmesini sağlar. Bu, bir denetim öğesinin tüm ekleme noktalarında hata alması durumunda denetimin hızla sonlandırılmasına yardımcı olur.
+
+<i style="color:#ff4500;">Pause the task if: [15] consecutive audit items fail. </i>Bu, art arda belirtilen sayıda denetim öğesinin başarısız olması durumunda tarama görevinin duraklatılmasını sağlar. Bu, geniş çaplı bir sorunun (örneğin ağ kesintisi) olup olmadığını belirlemek için kullanılır.
+
+
+<i style="color:#ff4500;">[ ] % of audit items fail.: </i>Toplam denetim öğelerinin belirtilen bir yüzdesi başarısız olduğunda tarama görevini duraklatır. Bu, genel bir başarısızlık oranını izlemek için kullanılır.
+
+<i style="color:#ff4500;">On completion of each audit phase, do [1] follow-up passes to retry failed operations.: </i>Her denetim aşamasının tamamlanmasının ardından, başarısız operasyonları yeniden denemek için belirtilen sayıda takip denemesi yapar. Bu, geçici hatalar nedeniyle başarısız olan istekleri yeniden denemek için kullanılır.
+
+Bu ayarlar, tarama sırasında karşılaşılabilecek hatalara karşı Burp Suite'in tepkisinin nasıl olacağını kontrol eder. Özellikle büyük ve karmaşık uygulamaları tarama sırasında, bu ayarların doğru bir şekilde yapılandırılması önemlidir.
+
+
+<i style="color: yellow;">d. Insertion Point Types:</i> Bu bölüm saldırı yüklerinin (payloads) isteklerin neresine ekleneceğini belirtir. Burp Suite’in otomatik tarama işlevi, belirttiğiniz yere saldırı yüklerini ekleyerek zafiyetleri tespit etmeye çalışır. 
+
+Şimdi bu seçenekleri detaylıca inceleyelim:
+
+
