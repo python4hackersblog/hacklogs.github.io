@@ -191,4 +191,8 @@ Bu ayarlar, tarama sırasında karşılaşılabilecek hatalara karşı Burp Suit
 
 Şimdi bu seçenekleri detaylıca inceleyelim:
 
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEie7jp7L_Mw5yG5ziHCzq3rKkrwAqAalJQ3-QrN5F37z6czwEVJiU_Cfa_x_D5l8J4Fp3NpUGfqSHaxAcrfWoVrGXKKfFE_hjJHpvBo-iP6nJZGB-U1TYzqEMIya3igKVaCHmb6gQNIo61oDd31gMSkQ9-dZSgwTJljMEmG8BLP-tYXIEhkJNd-ZLUHN99R/s320/13,5.png" height="" width="">
+
+
+
 
