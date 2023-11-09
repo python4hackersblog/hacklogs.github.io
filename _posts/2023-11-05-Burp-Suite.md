@@ -194,5 +194,8 @@ Bu ayarlar, tarama sırasında karşılaşılabilecek hatalara karşı Burp Suit
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEie7jp7L_Mw5yG5ziHCzq3rKkrwAqAalJQ3-QrN5F37z6czwEVJiU_Cfa_x_D5l8J4Fp3NpUGfqSHaxAcrfWoVrGXKKfFE_hjJHpvBo-iP6nJZGB-U1TYzqEMIya3igKVaCHmb6gQNIo61oDd31gMSkQ9-dZSgwTJljMEmG8BLP-tYXIEhkJNd-ZLUHN99R/s320/13,5.png" height="" width="">
 
 
+<i style="color:#ff4500;">URL parameter values:</i>Bu seçenek aktif olduğunda, Burp Suite, URL'de yer alan parametre değerlerini değiştirerek bu kısımlara saldırı yükleri ekler. Örneğin, example.com/page?param1=value1&param2=value2 şeklinde bir URL'de "value1" ve "value2" yerlerine saldırı yükleri eklenir.
+
+
 
 
