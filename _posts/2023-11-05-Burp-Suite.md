@@ -196,6 +196,54 @@ Bu ayarlar, tarama sırasında karşılaşılabilecek hatalara karşı Burp Suit
 
 <i style="color:#ff4500;">URL parameter values:</i>Bu seçenek aktif olduğunda, Burp Suite, URL'de yer alan parametre değerlerini değiştirerek bu kısımlara saldırı yükleri ekler. Örneğin, example.com/page?param1=value1&param2=value2 şeklinde bir URL'de "value1" ve "value2" yerlerine saldırı yükleri eklenir.
 
+<i style="color:#ff4500;">Body parameter values:</i>HTTP isteğinin gövdesinde (body) yer alan parametre değerleri üzerinde saldırı yükleri eklemek için bu seçeneği kullanabilirsiniz. Özellikle POST metodunda gönderilen verilere yük eklemek için kullanılır.
+
+<i style="color:#ff4500;">Cookie parameter values:</i>Bu seçenekle, HTTP isteklerinde gönderilen çerez (cookie) değerlerine saldırı yükleri eklenir.
+
+<i style="color:#ff4500;">Parameter name: </i>Normalde saldırı yükleri parametre değerlerine eklenir. Ancak bu seçenek sayesinde parametre isimlerine de saldırı yükleri eklenir.
+
+<i style="color:#ff4500;">HTTP headers:</i>Bu seçenek aktif olduğunda, Burp Suite, HTTP başlıklarına (headers) saldırı yükleri ekler. Örneğin, User-Agent veya Referer başlıklarında değişiklikler yaparak bu başlıkların değerlerini değiştirebilir.
+
+<i style="color:#ff4500;">Entire body (for relevant content types):</i>Bu seçenekle, HTTP isteğinin tüm gövdesine, uygun içerik türleri için saldırı yükleri eklenir.
+
+<i style="color:#ff4500;">URL path filename:</i>URL'de yer alan dosya isimlerine saldırı yükleri eklemek için bu seçeneği kullanabilirsiniz. Örneğin, example.com/files/document.pdf şeklinde bir URL'de "document.pdf" ismine saldırı yükleri eklenir.
+
+<i style="color:#ff4500;">URL path folders:</i>URL'de belirtilen klasör yollarına saldırı yükleri eklemek için bu seçenek kullanılır. Örneğin, example.com/folder1/folder2/page.html şeklinde bir URL'de "folder1" ve "folder2" klasör yollarına yükler eklenir.
+
+
+Her bir ekleme noktası (insertion point), belirli bir güvenlik zafiyetini tespit etmek için önemli olabilir. Ancak, tüm ekleme noktalarını kullanmak, taramanın süresini uzatabilir ve hedef uygulamaya gereksiz yere yük bindirebilir. Bu nedenle, hedef uygulamanın yapısını ve tarama hedeflerinizi göz önünde bulundurarak hangi ekleme noktalarını kullanacağınıza karar vermelisiniz.
+
+
+<i style="color: yellow;">e. Modifying Parameter Locations:</i> Bu bölüm belirli bir istekteki parametrelerin konumlarını değiştirmek için kullanılır. Bu, bazı filtreleri aşmak için kullanılabilir, çünkü birçok uygulama sadece belirli yerlere gelen parametreleri doğrulama veya filtreleme eğilimindedir. Parametrelerin yerlerini değiştirerek, bu tür doğrulamaları veya filtrelemeleri atlatmak mümkün olabilir. Ancak bu, çok daha fazla tarama isteği gönderilmesi anlamına gelir ve tarama süresini uzatabilir. Şimdi bu seçenekleri detaylıca inceleyelim:
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtkt1T53psHMGVRwzkuLkxIJuEi-z7WJ2MsuNFNnzR2RB183uqaZSFockffAmySEWiaGS6Pm7HOR8k4qRIKb8LekN_KTovNrZO0shOQhse8Pvrp9K5KuTOj2AUSEq7bYVUrJEru1HFcEe3k3tT4O-JJVL3wLb0U-voktp826ovkF950knPEyDjepy-OBUF/s320/14.png" height="" width="">
+
+<i style="color:#ff4500;">URL to body: </i>Bu seçenek, URL'deki parametreleri isteğin gövdesine (body) taşır. Örneğin, bir GET isteği **example.com/page?param=value** şeklinde ise bu, POST isteği şeklinde **example.com/page** URL'ine ve gövdesine param=value olarak değiştirilir.
+
+<i style="color:#ff4500;">URL to cookie: </i>URL'deki parametreleri bir çerez (cookie) olarak taşır. Bu, **example.com/page?param=value** URL'sini **example.com/page** şeklinde ve bir çerez olarak param=value şeklinde değiştirir.
+
+<i style="color:#ff4500;">Body to URL: </i>Bu seçenek, isteğin gövdesindeki (body) parametreleri URL'ye taşır.
+
+<i style="color:#ff4500;">Body to cookie: </i>İsteğin gövdesindeki parametreleri bir çerez (cookie) olarak taşır.
+
+<i style="color:#ff4500;">Cookie to URL: </i>Çerezlerdeki parametreleri URL'ye taşır.
+
+<i style="color:#ff4500;">Cookie to body: </i>Çerezlerdeki parametreleri isteğin gövdesine (body) taşır.
+
+Bu özellik, belirli güvenlik mekanizmalarını veya filtreleri aşmak istendiğinde kullanışlıdır. Örneğin, bir web uygulamasının sadece URL'deki parametreleri filtrelediğini ve gövdedeki veya çerezdeki parametreleri filtrelemediğini fark ederseniz, bu seçeneklerle bu tür filtreleri atlayabilirsiniz. Ancak unutulmamalıdır ki bu, taramanın genel süresini ve karmaşıklığını artırabilir. Bu nedenle, bu seçeneklerin ne zaman ve neden kullanılacağına dair stratejik bir yaklaşım benimsemek önemlidir.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
