@@ -429,11 +429,26 @@ Target ekranı, bir uygulamanın genel yapısını anlamak için harika bir ara�
 <h3 style="color:yellow;">2. Scope Settings</h3>
 
 
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijTYTzjbsCmTWBKCanqJpwosbG9WbwumrOZNPYRJKeDApSVvr7vHRCONDzZ8Y8FDXEMJiHTok65xTW-FEyDB7cNQPG_O0TV39ix_DLb-pBvJD5Qrzg6ELvUhNKph-FWOy_9V2OWnvmiIFH6n_jv5C49YiU91xDZ3J0ejlCSwLI4sdqMZ4c6pW01b6FMQi9/s16000/24.png" height="" width="">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9RHRsME5T2si1TIEIMtNnh6I78a3fbDTqWNUgxtOQo2KCxlI3nkSZWE5gp6N4zuBOsMNI1gJdJRPlF32wGRSLIaQ5-J2VDbzDmaNbTK42pC4GlcAUxF7yXaOAGAAUy5PWBHr6enXpnXj7fxRV9q-bdQDEV5fS4TsmL956WUr9YqH5KiHN5Bbb3zTxDAuE/s16000/25.png" height="" width="">
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5UepXfC4cVQH2AjtiyGSaP6TeTcwdw46w0IVxMfI9bpYyvDDvH5s_xOUWe3aHvDG4nST7lqL4aoIEUheO22nn4R_broaXPusgrFH6mfIILCINIPhAiXUqs9AWLHFzJ5vwQ3vwYlnqnFA2AOR65KszFLjXW7TtKZMj4rJB3Wea_-pPjJcXR0HyXNvNde0c/s16000/26.png" height="" width="">
+
+Bu bölüm, Burp Suite içinde çalışırken hangi hedeflerin aktif olarak dikkate alınacağını tanımlamak için kullanılır. Bu ayarlar, Burp Suite'in içerisindeki birçok aracın davranışını etkiler. Şimdi bu bölümü detaylı bir şekilde inceleyelim.
+
+<i style="color:#ff4500;">Use Advanced Scope Control:</i> Etkinleştirildiğinde, kapsamı detaylı bir şekilde ayarlamanızı sağlar. Özellikle geniş uygulamalarda, belirli endpoint'leri veya servisleri izole ederek tarama yapmanız gerektiğinde bu özellik oldukça kullanışlıdır.
+
+<i style="color:#ff4500;">Include in Scope:</i> Örneğin, hedefiniz example.com ise fakat sadece example.com/admin bölümünü tarayıp, diğer kısımları pas geçmek isterseniz, bu alana https://example.com/admin/* şeklinde bir prefix eklersiniz.
+
+<i style="color:#ff4500;">Exclude from Scope:</i> Hassas bölümleri ya da belirli endpoint'leri taramanın dışında tutmak için kullanılır. Örneğin; example.com/payment bölümünün taranmasını istemiyorsanız, bu alana ekleyerek dışarıda bırakabilirsiniz.
 
 
+<i style="color:#ff4500;">Out-of-Scope Request Handling </i> 
 
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Drop All Out-of-Scope Requests:</i> Kapsam dışı tüm istekleri otomatik olarak durdurur. Bu, yanlışlıkla kapsam dışı bir bölgeye istek gönderilmesini engeller. Özellikle canlı sistemlerde, hedef dışı bir servise zarar vermekten kaçınmak için bu seçenek oldukça kritiktir.
 
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Use Suite Scope:</i> Genel suite kapsamını kullanır. Bu, global ayarlarınıza dayanarak kapsam dışı isteklerin nasıl ele alınacağını belirtir.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Use Custom Scope:</i> Spesifik bir tarama için özel kapsam tanımlar. Bu, belirli bir görev için global kapsam ayarlarınızdan farklı bir kapsamda çalışmanıza olanak sağlar.
 
 
 
