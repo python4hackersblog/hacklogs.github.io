@@ -347,7 +347,7 @@ Bu bölüm genellikle birden fazla tarama görevi yürütürken sistem kaynaklar
 
 Bu bölüm Target ekranı, web uygulamalarını ve hizmetlerini test ederken kritik bir araçtır. Bu ekran, bir web sitesinin yapısını analiz etmek, belirli istekleri incelemek ve potansiyel güvenlik zafiyetlerini keşfetmek için kullanılır. Aşağıda bahsedilen bölümler, Target ekranının ana bileşenleridir.
 
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbHxNy5doVqUBR078ho9m4u5rrMdyfEunpKqaIoGbWFRbcqv4eDltx22TRMOcG6RPxijYYTmG6YBinG72ZsEbfZmp1bJmYWJUAFAtumwyq7N3Vf4k57OLosMwU2NgB_qPooLaFkFRpb44EcOre5gvH06d7B6oFkmReR4fjAFlL3AMKOx6ZxoIT94TBq9EZ/s16000/22.png" height="" width="">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbHxNy5doVqUBR078ho9m4u5rrMdyfEunpKqaIoGbWFRbcqv4eDltx22TRMOcG6RPxijYYTmG6YBinG72ZsEbfZmp1bJmYWJUAFAtumwyq7N3Vf4k57OLosMwU2NgB_qPooLaFkFRpb44EcOre5gvH06d7B6oFkmReR4fjAFlL3AMKOx6ZxoIT94TBq9EZ/s16000/22.png" height="400" width="600">
 
 <h3 style="color:yellow;">1. Site Map</h3>
 •	Site map, tarama sırasında keşfedilen tüm URL'leri hiyerarşik bir yapıda gösterir.
