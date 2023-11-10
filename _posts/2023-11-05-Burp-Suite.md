@@ -391,10 +391,45 @@ Target ekranı, bir uygulamanın genel yapısını anlamak için harika bir ara�
 <i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Hide not-found items:</i> 404 gibi "bulunamadı" yanıtlarını gizler, böylece yanıltıcı veya gereksiz bilgilere odaklanmazsınız.
 
 
+<i style="color:#ff4500;">**Filter by MIME Type:**</i> Web uygulamalarının cevap olarak döndürdüğü içerik tiplerini temsil eden MIME türlerini filtreler.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	HTML,Script,Other text vs:</i> Örneğin, cross-site scripting (XSS) gibi belirli zafiyetleri araştırıyorsanız, 'Script' veya 'HTML' türlerine odaklanmak isteyebilirsiniz.
 
 
+<i style="color:#ff4500;">**Filter by Status Code:**</i> HTTP protokolüne göre belirli yanıt kodlarına göre filtreleme yapabilirsiniz.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	2xx [success]:</i> Başarılı istekleri gösterir.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	3xx [success]:</i> Yönlendirme yanıtlarını gösterir, potansiyel olarak tehlikeli yönlendirmeleri veya açık yönlendirmeleri tespit etmek için kullanılır.
 
 
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	4xx [success]:</i> Kötü istekler, yani genellikle istemci hatası sonucu oluşan yanıtlar.
+
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	5xx [success]:</i> Sunucu hatalarını gösterir, potansiyel olarak sunucuda bir sorun olup olmadığını kontrol etmek için kullanılır.
+
+
+<i style="color:#ff4500;">**Folders**</i>
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Hide empty folders:</i> İçerisinde öğe bulunmayan klasörleri gizler, böylece daha derli toplu bir görünüm elde edersiniz.
+
+
+<i style="color:#ff4500;">**Filter by search term** :</i> Belirli kelimeler veya regex ifadeleriyle istek ve yanıtlarda arama yapmanızı sağlar.
+
+<i style="color:#ff4500;">**Filter by File Extension** :</i> Belirli dosya uzantılarına sahip istekleri gösterme veya gizleme imkanı tanır. Örneğin; sadece sunucu tarafı kodunun çalıştığı ".php, .asp, .jsp" gibi uzantıları görmek veya potansiyel olarak ilgisiz ".jpg, .png" gibi kaynakları gizlemek için bu seçenekleri kullanabilirsiniz.
+
+
+<i style="color:#ff4500;">**Filter by Annotation** :</i> Belirli dosya uzantılarına sahip istekleri gösterme veya gizleme imkanı tanır. Örneğin; sadece sunucu tarafı kodunun çalıştığı ".php, .asp, .jsp" gibi uzantıları görmek veya potansiyel olarak ilgisiz ".jpg, .png" gibi kaynakları gizlemek için bu seçenekleri kullanabilirsiniz.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Show only commented items:</i> Özellikle uzun süreli testlerde, daha önce yorum eklediğiniz veya not aldığınız öğeler üzerinde çalışmak için kullanışlıdır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Show only highlighted items:</i> Dikkat çekmek istediğiniz veya daha sonra incelemek üzere işaretlediğiniz öğeleri görüntüler.
+
+
+<h3 style="color:yellow;">2. Scope Settings</h3>
+
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijTYTzjbsCmTWBKCanqJpwosbG9WbwumrOZNPYRJKeDApSVvr7vHRCONDzZ8Y8FDXEMJiHTok65xTW-FEyDB7cNQPG_O0TV39ix_DLb-pBvJD5Qrzg6ELvUhNKph-FWOy_9V2OWnvmiIFH6n_jv5C49YiU91xDZ3J0ejlCSwLI4sdqMZ4c6pW01b6FMQi9/s16000/24.png" height="" width="">
 
 
 
