@@ -321,6 +321,35 @@ Bu bölüm, Burp Suite kullanıcısına, belirli bir denetim görevi için farkl
 
 
 
+<h3 style="color:yellow;">3. Resource Pool</h3>
+Bu bölüm genellikle birden fazla tarama görevi yürütürken sistem kaynaklarını yönetmek için kullanılır. Eğer sistemde birden fazla tarama veya görev yürütülüyorsa, belirli bir görevin diğerleri üzerinde çok fazla kaynak kullanmamasını sağlamak için bu özellik kullanılır. Aşağıda, bu bölümdeki seçeneklerin ne anlama geldiği ve nasıl yapılandırılması gerektiği ile ilgili ayrıntılı bir açıklama bulabilirsiniz.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdhR-brQW1Ql_Hu2XYFU4p4A3BTmQcDKxaKHrDEttrMhO-jnLlYNDkMyUgeieafWe-38jpdTGCWGnA_xfQ9C4InW47qmqrlUYmC0Lkhsd6bja-yeSxnz_zxNvJn66yfXZ6iIALvN8SpoR_yP228oAvpI34cH-9Zkp3SYm2bKPi8zIAgJncosXbctYWvUq-/s16000/21.png" height="" width="">
+
+
+<i style="color:#ff4500;">Use existing resource pool:</i> Eğer daha önce oluşturulmuş bir kaynak havuzu varsa, bu seçeneği işaretleyerek o kaynak havuzunu kullanabilirsiniz.
+
+<i style="color:#ff4500;">Selected:</i> Bu sütun, hangi kaynak havuzunun seçildiğini belirtir.
+
+<i style="color:#ff4500;">Resources pool:</i> Bu sütun, oluşturulan kaynak havuzlarının isimlerini gösterir.
+
+<i style="color:#ff4500;">Concurrent requests:</i> Bu, aynı anda kaç isteğin gönderilebileceğini belirtir. Örneğin, eğer bu değer 5 olarak ayarlanırsa, tarama sırasında aynı anda en fazla 5 istek gönderilir. Bu değeri, hedef sunucunun kapasitesine göre ayarlamalısınız. Eğer hedef sunucu çok sayıda isteği kaldırabilecek kapasitede değilse, bu değeri düşük tutmalısınız.
+
+<i style="color:#ff4500;">Request delay:</i> Bu, istekler arasındaki gecikme süresini belirtir. Örneğin, eğer bu değer 100 milisaniye ayarlanırsa, her istekten sonra 100 milisaniye beklenir.
+
+<i style="color:#ff4500;">Random delay:</i> Bu, istekler arasındaki gecikme süresine ek olarak rastgele bir gecikme süresi ekler. Bu, taramanın daha "insan benzeri" olmasını sağlar ve potansiyel olarak bazı WAF veya IDS sistemlerini atlatmada yardımcı olabilir.
+
+<i style="color:#ff4500;">Delay increment:</i> Eğer tarama sırasında hedef sunucudan hatalar alınırsa, bu değer kadar gecikme süresi arttırılır. Bu, hedef sunucunun aşırı yüklenmesini önlemeye yardımcı olabilir.
+<br><br><br>
+
+
+<h1 style="color:yellow;">DASHBOARD EKRANI</h1>
+<h3 style="color:yellow;">A. Live Passive Crawl From Proxy (all traffic)</h3>
+
+
+
+
+
 
 
 
