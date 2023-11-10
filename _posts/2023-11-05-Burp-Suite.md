@@ -237,8 +237,87 @@ Bu özellik, belirli güvenlik mekanizmalarını veya filtreleri aşmak istendi�
 <i style="color: yellow;">f. Ignored Insertion Points:</i> Bu bölüm tarama sırasında belirli enjeksiyon testlerinin atlanması için tasarlanmıştır. Bu, belirli parametrelerin ya da değerlerin zaten güvenli olduğunu bilerek veya tarama süresini kısaltarak bazı kontrol noktalarını (insertion points) atlamak istediğinizde kullanışlıdır. Ayrıca, hedef uygulamanın yanıt vermediği veya tarama nedeniyle hata verdiği belirli parametreler üzerinde testler yapmak istemeyebilirsiniz. Bu bölümün amacı, bu tür durumları ele alarak taramayı daha verimli ve hedefe özgü hale getirmektir.
 
 
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7y7MRvtO_IOEtl8-qnZm2OjDYIxb1kp8XZ6uPDN177MPyrC5_tqeIb7S7rsTxwBqn4gbtFuBBbctNIx7Gqs3CwBnYtOt3gXP3sFmyWHmCMcgYn2oCuP63QwmQpg1dMFPx-6J-Ut0w1CQBDPrHlOWf9iviXSbMtAY0B_HADL9oy16qCqwquE7xPvroFM8K/s16000/16.png" height="400" width="600">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7y7MRvtO_IOEtl8-qnZm2OjDYIxb1kp8XZ6uPDN177MPyrC5_tqeIb7S7rsTxwBqn4gbtFuBBbctNIx7Gqs3CwBnYtOt3gXP3sFmyWHmCMcgYn2oCuP63QwmQpg1dMFPx-6J-Ut0w1CQBDPrHlOWf9iviXSbMtAY0B_HADL9oy16qCqwquE7xPvroFM8K/s16000/16.png" height="" width="">
 
+
+<i style="color:#ff4500;">Skip server-side injection tests for these parameters:</i>Bu bölüm, sunucu tarafı enjeksiyon testlerinin belirli parametreler için atlanmasını sağlar. Bu, belirli parametrelerin ya da değerlerin zaten güvenli olduğunu bilerek ya da potansiyel olarak yanıltıcı pozitif sonuçlardan kaçınmak için bazı kontrolleri (insertion points) atlamak istediğinizde kullanışlıdır. Örneğin, bir CSRF belirteci ya da oturum tanımlayıcısı gibi dinamik değerlere sahip parametreler üzerinde sunucu tarafı enjeksiyon testleri yapmanın gereksiz ya da yanıltıcı olabileceğini düşünebilirsiniz.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Enable: </i> Bu sütun, belirli bir parametrenin ya da değerin testten atlanıp atlanmayacağını belirtir. Örneğin, belli bir parametrenin geçici olarak test edilmemesini istiyorsanız, bu seçeneği kaldırabilirsiniz.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Parameter: </i> Atlamak istediğiniz parametrenin adı.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Item: </i> Parametrenin hangi bölümünde olduğunu belirtir (örn. URL, Body, Header).
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Match Type: </i> Parametrenin nasıl eşleştirileceğini belirtir (örn. tam eşleşme, regex).
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Expression: </i> Eşleştirme için kullanılacak değer ya da ifade.
+
+
+<i style="color:#ff4500;">Skip all tests for these parameters:</i>Bu bölüm, belirli parametreler için tüm testlerin atlanmasını sağlar. Bu, belirli bir parametrenin ya da değerin tamamen güvenli olduğunu bildiğinizde veya tarama sırasında dikkate almak istemediğinizde kullanışlıdır.
+
+
+
+<i style="color: yellow;">g.	Frequently Occurring Insertion Points:</i> Bu bölüm, Burp Suite'in tarama sırasında aynı ekleme noktasının büyük sayıda istekte gözlemlendiğinde daha verimli bir hızlı tarama gerçekleştirmesini sağlar. Bu, özellikle büyük uygulamalarda, belirli ekleme noktalarının yüksek frekansta tekrarlandığı durumlarda kullanışlıdır. Bu özelliğin amacı, tekrarlayan ve sonuçta değişiklik olmayan ekleme noktaları için tarama sürecini hızlandırmaktır.
+
+
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgidZ1TYo8Doh_4IC28Of0DDAcD756KiH2WHU3MAX9RCAeK55OmlOSqZdD_tCyEsAA5cr07io6BSf5i_LksZg5WWGnl7He_XDpskk5nSHqaPNqe0erihxAylyEzRikUGmKXeMry4Yl93xxl7_6hlmb_idKPSobFH-91hUYFnwQ1pevinKoFBtUVZl8DJVb8/s16000/17.png" height="" width="">
+
+
+Bu seçeneklerin aktivasyonu, hangi ekleme noktalarının hızlı taramaya tabi tutulacağını belirler. Eğer bir ekleme noktası bu listede işaretlenmemişse, standart tarama süreci uygulanacaktır. Bu özellik, özellikle büyük projelerde tarama süresini önemli ölçüde azaltabilir.
+
+
+
+<i style="color: yellow;">h.	Misc Insertion Point Options:</i> Bu bölüm, Burp Suite'in tarama sırasında nasıl ekleme noktaları oluşturduğunu kontrol etmenizi sağlar. Bu seçenekler, özellikle karmaşık ve iç içe geçmiş veri yapılarıyla çalışırken taramanın nasıl davranacağını ayarlar.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7ctzAhN_OjNfZsJP33XOA6Nd_0nt91fcMShq_BVIZaE0MKNbfchOS9tmQ72-A4xK367JbOdy85Jtf9Odx0KbKCbQs18BsS6PvnXCsWlh1hmzRJVYjXuyNk-m7wzxrvEJ2WUzwCLRUeZZP0NEkaj9lJbMJCA_ZrV14U0zpuUKD0YTbOAB_qKxmAJTTAFKS/s16000/18.png" height="" width="">
+
+<i style="color:#ff4500;">Use nested insertion points (İç içe geçmiş ekleme noktalarını kullan):</i>Bu seçenek, iç içe geçmiş (nested) veri yapılarında ekleme noktaları oluşturulup oluşturulmayacağını kontrol eder. Örneğin, bir uygulama iç içe geçmiş JSON yapısını kabul ediyorsa, bu seçenek aktif edildiğinde, Burp iç içe geçmiş her bir değer için ekleme noktası oluşturacaktır.
+
+**{
+    "user": {
+        "id": 123,
+        "details": {
+            "name": "kamil",
+            "address": "123 asdfg"
+        }
+    }
+}**
+
+Eğer bu seçenek aktif edilirse, "id", "name" ve "address" gibi iç içe geçmiş alanlar için ekleme noktaları oluşturulacaktır.
+
+
+<i style="color:#ff4500;">Maximum insertion points per base request (Temel istek başına maksimum ekleme noktası):</i>Bu seçenek, her bir temel istek için oluşturulacak maksimum ekleme noktası sayısını belirtir. Genellikle, bir istekte çok sayıda parametre veya potansiyel ekleme noktası olduğunda, tarama süresini azaltmak ve taramanın daha yönetilebilir olmasını sağlamak için bu limiti belirlemek yararlı olabilir. Örneğin, 30 olarak belirlenirse, Burp her bir temel istek için en fazla 30 ekleme noktası oluşturacaktır.
+
+<i style="color: yellow;">i.	JavaScript Analysis:</i> Bu bölüm, Burp Scanner'ın JavaScript analizi davranışını kontrol etmenizi sağlar. Aşağıda, bu bölümde bulunan ayarlar ve seçenekler detaylı bir şekilde açıklanmıştır.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgx6z2T1m4YgiOXT1BXKQ9DKVLyAuB3gUCUhVvA3ApXQljCt6cxBfXkAGykq2m5-QNhulQG0LfjM4d5-dyLtbI1-v83mjn1jOqzG0mUW63GBY_VdpYfqWDk1PUhSH5uO-TkVPGaUF3HbLrCmH4t-S4h4Z6RCwH0z33oOrmF1twaWL_cp6QsE3oVsTbLiYYB/s16000/19.png" height="" width="">
+
+<i style="color:#ff4500;">Make requests for missing site resources:</i> Bu seçenek, web sitesinin eksik kaynakları için otomatik istekte bulunulup bulunulmayacağını belirler. Bu, daha önce taranmamış olan veya keşfedilmemiş olan kaynakların tespiti için önemlidir. Örneğin ; Eğer bir web sayfası başka bir JS dosyasını çağırıyorsa ancak bu dosya daha önce taranmamışsa, bu seçenek sayesinde Burp Scanner eksik olan bu JS dosyasını otomatik olarak isteyip analiz edebilir.
+
+<i style="color:#ff4500;">Fetch previously undiscovered resources and data from out-of-scope hosts:</i> Bu seçenek, daha önce keşfedilmemiş kaynak ve verilerin, belirlenen kapsamın dışındaki sunuculardan alınıp alınmayacağını belirler. Örneğin; Bir web sayfası, harici bir CDN'den (İçerik Dağıtım Ağı) bazı dosyaları çağırıyorsa, bu seçenek aktif olduğunda Burp Scanner bu dosyaları otomatik olarak çekip analiz edebilir.
+
+<i style="color:#ff4500;">Use dynamic analysis techniques & Use static analysis techniques:</i> Bu seçenekler, Burp Scanner'ın JavaScript kodunu dinamik ve statik olarak nasıl analiz edeceğini belirler. Dinamik analiz, kodun gerçekte nasıl çalıştığına dair gerçek zamanlı bir analiz sağlarken; statik analiz, kodun çalıştırılmadan yapılandırmasını ve içeriğini analiz eder. Örneğin; Bir JavaScript fonksiyonu, kullanıcının girdiği verilere göre farklı çıktılar üretiyorsa, dinamik analiz bu çıktıları gerçek zamanlı olarak değerlendirirken, statik analiz sadece fonksiyonun nasıl yazıldığına bakar.
+
+<i style="color:#ff4500;">Maximum dynamic/static analysis time peri tem (in seconds):</i> Bu değerler, her bir öğe için harcanacak maksimum analiz süresini saniye cinsinden belirtir. Bu, taramanın ne kadar süre alacağını ve kaynak kullanımını kontrol altında tutmaya yardımcı olur. Örneğin; Eğer bu değer 30 saniye olarak ayarlandıysa, Burp Scanner her bir JavaScript kodu veya fonksiyonu için en fazla 30 saniye analiz yapar.
+
+Bu ayarlar, Burp Scanner'ın JavaScript kodları üzerindeki analizini daha etkili ve optimize edilmiş bir şekilde yapmasını sağlar.
+
+
+<i style="color: yellow;">j.	Audit Project Option Overrides:</i> Bu bölüm, denetim görevi için belirlenen ayarların, genel Proje Seçeneklerinde tanımlanan ayarların üzerine yazılmasına izin verir. Eğer bir ayar boş bırakılırsa, bu ayar otomatik olarak Proje Seçeneklerinde tanımlanan değeri alır. Örneğin; Diyelim ki Proje Seçeneklerinde bir timeout değeri 10 saniye olarak belirlendi, ancak bu denetim görevi için bu değeri 20 saniye olarak belirtmek istiyorsunuz. "Audit Project Option Overrides" bölümünden bu değeri 20 saniye olarak ayarlayabilirsiniz ve bu ayar sadece bu denetim görevi için geçerli olacaktır.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHIfUBJtk1T3aSMdY5Fz493Chpp3SvZsH8lHjMSU3PM-jwPk7stinFick9J26LlLjmHMXVQV3wKBQP-68BaenDKrVVcHei2rEhqkBhVtxXGDcceNqsiTzLZ6m_3N30jz-sKzOgclkA3JEQGpjCAYZqMgv0O_V33EmrdzLboSOFMU2_LivGZIC3_COaTrOz/s16000/20.png" height="" width="">
+
+<i style="color:#ff4500;">Maximum dynamic/static analysis time peri tem (in seconds):</i> Bu ayarlar, çeşitli ağ görevleri için kullanılacak zaman aşımı sürelerini belirtir. Değerler saniye cinsindendir. Bir görevin asla zaman aşımına uğramaması için ilgili seçeneği sıfıra ayarlayabilirsiniz.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Connect: </i> Bu değer, bir sunucuya bağlantı kurma işlemi sırasında ne kadar süre beklenmesi gerektiğini belirtir. Eğer belirtilen süre içerisinde bağlantı kurulamazsa, bağlantı zaman aşımına uğrar.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Normal: </i> : Bu değer, normal ağ istekleri için beklenmesi gereken maksimum süreyi belirtir. Örneğin, bir web sayfasını yüklemek veya bir API isteğini tamamlamak için ne kadar süre beklenmesi gerektiği bu değer ile belirlenir.
+
+
+Örnek; Connect değeri 5 saniye olarak ayarlandıysa, Burp Suite sunucuya bağlantı kurmaya çalışırken 5 saniye bekler. Eğer bu süre zarfında bağlantı kurulamazsa, bağlantı zaman aşımına uğrar ve istek başarısız olur.
+
+Bu bölüm, Burp Suite kullanıcısına, belirli bir denetim görevi için farklı ayarlar kullanma esnekliği sağlar. Bu sayede, farklı hedefler ve farklı denetim görevleri için optimize edilmiş ayarlar kullanılabilir.
 
 
 
