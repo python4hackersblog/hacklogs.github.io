@@ -171,7 +171,7 @@ Sonuç olarak, Issues Reported bölümü, denetiminizin ne kadar kapsamlı ve ne
 Şimdi ayarları detaylı bir şekilde inceleyelim: 
 
 
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjk_vdrsYDr9i4exBfon9jysYlBtb0-0MPBMwuGyvqZFmpE709agrPid7PTXacY_xvw29p9uTgLevsrT3aR7ryfbhkL9jsWe_LeqryNnTjufHKXFXFqe3eeXSV_CTMGi02aCVvmgLe1SLXL0jJ-Z6R1kORpM8sWw-hTJ38YG7nmh90DUzXkN54a_Wb3quyf/s864/13.png" height="400" width="600">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjk_vdrsYDr9i4exBfon9jysYlBtb0-0MPBMwuGyvqZFmpE709agrPid7PTXacY_xvw29p9uTgLevsrT3aR7ryfbhkL9jsWe_LeqryNnTjufHKXFXFqe3eeXSV_CTMGi02aCVvmgLe1SLXL0jJ-Z6R1kORpM8sWw-hTJ38YG7nmh90DUzXkN54a_Wb3quyf/s864/13.png" height="" width="">
 
 <i style="color:#ff4500;">If [2] consecutive audit checks fail, skip remaining checks in the current insertion point: </i>Bu ayar, belirli bir ekleme noktasında (insertion point) art arda belirtilen sayıda (örneğin 2) başarısız denetim kontrolü olması durumunda geriye kalan kontrollerin atlanmasını sağlar. Bu, hedef uygulamanın belirli bir ekleme noktasında sürekli hata vermesi durumunda, gereksiz yere daha fazla istek göndermemek için kullanılır.
 
@@ -191,7 +191,7 @@ Bu ayarlar, tarama sırasında karşılaşılabilecek hatalara karşı Burp Suit
 
 Şimdi bu seçenekleri detaylıca inceleyelim:
 
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEie7jp7L_Mw5yG5ziHCzq3rKkrwAqAalJQ3-QrN5F37z6czwEVJiU_Cfa_x_D5l8J4Fp3NpUGfqSHaxAcrfWoVrGXKKfFE_hjJHpvBo-iP6nJZGB-U1TYzqEMIya3igKVaCHmb6gQNIo61oDd31gMSkQ9-dZSgwTJljMEmG8BLP-tYXIEhkJNd-ZLUHN99R/s320/13,5.png" height="" width="">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEie7jp7L_Mw5yG5ziHCzq3rKkrwAqAalJQ3-QrN5F37z6czwEVJiU_Cfa_x_D5l8J4Fp3NpUGfqSHaxAcrfWoVrGXKKfFE_hjJHpvBo-iP6nJZGB-U1TYzqEMIya3igKVaCHmb6gQNIo61oDd31gMSkQ9-dZSgwTJljMEmG8BLP-tYXIEhkJNd-ZLUHN99R/s320/13,5.png" height="400" width="600">
 
 
 <i style="color:#ff4500;">URL parameter values:</i>Bu seçenek aktif olduğunda, Burp Suite, URL'de yer alan parametre değerlerini değiştirerek bu kısımlara saldırı yükleri ekler. Örneğin, example.com/page?param1=value1&param2=value2 şeklinde bir URL'de "value1" ve "value2" yerlerine saldırı yükleri eklenir.
