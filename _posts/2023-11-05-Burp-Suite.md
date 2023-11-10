@@ -216,7 +216,7 @@ Her bir ekleme noktası (insertion point), belirli bir güvenlik zafiyetini tesp
 
 <i style="color: yellow;">e. Modifying Parameter Locations:</i> Bu bölüm belirli bir istekteki parametrelerin konumlarını değiştirmek için kullanılır. Bu, bazı filtreleri aşmak için kullanılabilir, çünkü birçok uygulama sadece belirli yerlere gelen parametreleri doğrulama veya filtreleme eğilimindedir. Parametrelerin yerlerini değiştirerek, bu tür doğrulamaları veya filtrelemeleri atlatmak mümkün olabilir. Ancak bu, çok daha fazla tarama isteği gönderilmesi anlamına gelir ve tarama süresini uzatabilir. Şimdi bu seçenekleri detaylıca inceleyelim:
 
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtkt1T53psHMGVRwzkuLkxIJuEi-z7WJ2MsuNFNnzR2RB183uqaZSFockffAmySEWiaGS6Pm7HOR8k4qRIKb8LekN_KTovNrZO0shOQhse8Pvrp9K5KuTOj2AUSEq7bYVUrJEru1HFcEe3k3tT4O-JJVL3wLb0U-voktp826ovkF950knPEyDjepy-OBUF/s320/14.png" >
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtkt1T53psHMGVRwzkuLkxIJuEi-z7WJ2MsuNFNnzR2RB183uqaZSFockffAmySEWiaGS6Pm7HOR8k4qRIKb8LekN_KTovNrZO0shOQhse8Pvrp9K5KuTOj2AUSEq7bYVUrJEru1HFcEe3k3tT4O-JJVL3wLb0U-voktp826ovkF950knPEyDjepy-OBUF/s16000/14.png" >
 
 <i style="color:#ff4500;">URL to body: </i>Bu seçenek, URL'deki parametreleri isteğin gövdesine (body) taşır. Örneğin, bir GET isteği **example.com/page?param=value** şeklinde ise bu, POST isteği şeklinde **example.com/page** URL'ine ve gövdesine param=value olarak değiştirilir.
 
