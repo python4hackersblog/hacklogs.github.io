@@ -343,8 +343,58 @@ Bu bölüm genellikle birden fazla tarama görevi yürütürken sistem kaynaklar
 <br><br><br>
 
 
-<h1 style="color:yellow;">DASHBOARD EKRANI</h1>
-<h3 style="color:yellow;">A. Live Passive Crawl From Proxy (all traffic)</h3>
+<h1 style="color:yellow;">TARGET EKRANI</h1>
+
+Bu bölüm Target ekranı, web uygulamalarını ve hizmetlerini test ederken kritik bir araçtır. Bu ekran, bir web sitesinin yapısını analiz etmek, belirli istekleri incelemek ve potansiyel güvenlik zafiyetlerini keşfetmek için kullanılır. Aşağıda bahsedilen bölümler, Target ekranının ana bileşenleridir.
+
+<h3 style="color:yellow;">1. Site Map</h3>
+•	Site map, tarama sırasında keşfedilen tüm URL'leri hiyerarşik bir yapıda gösterir.
+•	Buradan, belirli URL'lere, dizinlere veya dosyalara hızlıca göz atabilir ve onları detaylı bir şekilde inceleyebilirsiniz.
+
+Örnek: Bir haber portalını taradığınızı düşünün. Site Map'te /news, /authors, /categories gibi endpoint'leri göreceksiniz. /news altında /news/sports veya /news/technology gibi alt kategorilere ayrılmış URL'leri de inceleyebilirsiniz.
+
+•	Uzman bir kullanıcı, bu haritayı kullanarak hangi endpoint'lerin daha riskli olabileceğini veya hangi endpoint'lerin daha ilgi çekici olduğunu hızla belirleyebilir.
+
+
+<i style="color:#ff4500;">Contents:</i> Bu sütun, oluşturulan kaynak havuzlarının isimlerini gösterir. İsteklerin metotları (GET, POST vs.), durum kodları, uzunlukları ve zaman damgaları gibi bilgileri de görebilirsiniz.
+Örnek: “/login” endpoint'ini ele alalım. Contents kısmında bu endpoint'e yapılan POST veya GET isteklerini, hangi parametrelerin kullanıldığını ve bu isteklerin ne zaman yapıldığını görebilirsiniz..
+
+<i style="color:#ff4500;">Issues:</i> Burp Suite'in otomatik taraması sırasında keşfedilen potansiyel güvenlik zafiyetlerini listeler. Her bir zafiyetin ayrıntılarına, seviyesine (örn. kritik, yüksek, orta, düşük) ve tespit edildiği URL'lere ulaşabilirsiniz.Örnek: XSS, SQL Enjeksiyonu veya CSRF gibi yaygın web zafiyetleri bu bölümde listelenebilir. Sızma testibug falan filan takılanlar için bu kısım, zafiyetlerin önceliklendirilmesi ve doğrulanması için başlangıç noktasıdır.
+
+<i style="color:#ff4500;">Request:</i> Seçilen bir isteğin ayrıntılarına göz atmanızı sağlar.Burada HTTP başlıkları, parametreler, kullanılan metot ve isteğin gövdesi gibi detayları görebilirsiniz.
+
+<i style="color:#ff4500;">Response:</i> Seçilen isteğin sunucudan aldığı yanıtın ayrıntılarını gösterir. HTTP durum kodu, başlıklar ve yanıtın içeriği gibi bilgileri içerir.
+Örnek: “/products” endpoint'ine yapılan bir istekte, sunucunun döndürdüğü ürün listesi, HTTP durum kodları (örn. 200 OK, 404 Not Found) ve yanıttaki başlıklar bu bölümde analiz edilebilir.
+
+<i style="color:#ff4500;">Inspector:</i> Hem istekleri hem de yanıtları derinlemesine analiz etmek için kullanılır.
+
+<i style="color:#ff4500;">Advisory:</i> Bu bölüm, belirlenen güvenlik zafiyetleri için detaylı bilgi ve öneriler sağlar. Nasıl bir saldırı yapılabilir, bu zafiyetin potansiyel etkileri nelerdir ve bu zafiyeti nasıl düzeltebileceğiniz gibi bilgilere ulaşabilirsiniz.
+
+Sonuç olarak, Target ekranı, Burp Suite içerisinde belki de en kritik analiz ve tespit işlemlerinin yapıldığı yerdir. Uygulama güvenliği uzmanları bu ekranı kullan arak, hedeflenen web uygulamasının veya web sitesinin derinlemesine analizini gerçekleştirirler.
+Target ekranı, bir uygulamanın genel yapısını anlamak için harika bir araçtır. Uygulama içerisindeki tüm URL'leri, parametreleri, sunucu yanıtlarını ve olası zafiyetleri görebilmek, bir güvenlik uzmanı için altın değerindedir. Bu, hem manuel testler için bir başlangıç noktası sağlar hem de otomatik taramaların doğru ve verimli bir şekilde gerçekleştirilmesine yardımcı olur.
+
+**Site map’in altındaki filtreleme seçeneklerine göz atalım;**
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiExvMNbGVXj62GpijAbtJ6bTBQYbxQGt7XViL8UdxlQU9i10tdK4XJ91LJb1KHmuIvlzkT3jqiLGyB6c4fcHgzF-juktBpyM-Wp5qncLXqbVLFVHkOK63loRy6ylszVp3QvEvwRN37ujTMhflcTXQJ3k0YfdHaUcuVjQloACUVjhOLmOYDWYTL7fFvf8HO/s16000/23.png" height="" width="">
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijTYTzjbsCmTWBKCanqJpwosbG9WbwumrOZNPYRJKeDApSVvr7vHRCONDzZ8Y8FDXEMJiHTok65xTW-FEyDB7cNQPG_O0TV39ix_DLb-pBvJD5Qrzg6ELvUhNKph-FWOy_9V2OWnvmiIFH6n_jv5C49YiU91xDZ3J0ejlCSwLI4sdqMZ4c6pW01b6FMQi9/s16000/24.png" height="" width="">
+
+
+<i style="color:#ff4500;">**Filter by Request Type:**</i>Bu kısım, görmek istediğiniz istek türlerini belirlemenizi sağlar. Hangi türdeki isteklerin sitemap'te görüntüleneceğini seçebilirsiniz.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Show only in-scope items: </i> Bu, sadece belirlenen hedef kapsamındaki öğeleri gösterir. Özellikle büyük uygulamalarla çalışırken, sadece belirli bir bölüm veya alt alan adı üzerinde çalışıyorsanız bu oldukça değerlidir. Bu özellik, gözden kaçan potansiyel açıkları tespit etmeye yardımcı olabilir. 
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Show only requested items:</i> Burp Suite kullanıcı tarafından manuel olarak yapılan istekleri gösterir. Bu, manuel olarak tetiklenen belirli istekler üzerinde çalışmak istediğinizde kullanışlıdır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Show only parameterized requests:</i> Sadece parametre içeren istekleri gösterir. Özellikle potansiyel olarak enjeksiyon, XSS veya CSRF zafiyetlerini araştırıyorsanız bu seçenek hayati önem taşır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Hide not-found items:</i> 404 gibi "bulunamadı" yanıtlarını gizler, böylece yanıltıcı veya gereksiz bilgilere odaklanmazsınız.
+
+
+
+
+
+
 
 
 
