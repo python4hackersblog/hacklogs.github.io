@@ -234,9 +234,10 @@ Bu özellik, belirli güvenlik mekanizmalarını veya filtreleri aşmak istendi�
 
 
 
+<i style="color: yellow;">f. Ignored Insertion Points:</i> Bu bölüm tarama sırasında belirli enjeksiyon testlerinin atlanması için tasarlanmıştır. Bu, belirli parametrelerin ya da değerlerin zaten güvenli olduğunu bilerek veya tarama süresini kısaltarak bazı kontrol noktalarını (insertion points) atlamak istediğinizde kullanışlıdır. Ayrıca, hedef uygulamanın yanıt vermediği veya tarama nedeniyle hata verdiği belirli parametreler üzerinde testler yapmak istemeyebilirsiniz. Bu bölümün amacı, bu tür durumları ele alarak taramayı daha verimli ve hedefe özgü hale getirmektir.
 
 
-
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7y7MRvtO_IOEtl8-qnZm2OjDYIxb1kp8XZ6uPDN177MPyrC5_tqeIb7S7rsTxwBqn4gbtFuBBbctNIx7Gqs3CwBnYtOt3gXP3sFmyWHmCMcgYn2oCuP63QwmQpg1dMFPx-6J-Ut0w1CQBDPrHlOWf9iviXSbMtAY0B_HADL9oy16qCqwquE7xPvroFM8K/s16000/16.png" height="" width="">
 
 
 
