@@ -476,6 +476,198 @@ Burp Suite'in Proxy modülü, bir güvenlik uzmanının oyun alanıdır. Interce
 <i style="color:#ff4500;">Open Browser (Tarayıcıyı Aç): </i> Bu özellik, yakalanan bir isteği doğrudan Burp Suite içerisinde bulunan yerleşik tarayıcıyla açmanıza imkan tanır. Bu sayede, bir isteğin sonucunu doğrudan görsel olarak kontrol edebilir ve belirli bir web sayfasının nasıl göründüğünü analiz edebilirsiniz.
 
 
+Buradaki önemli noktalardan biri olan **Proxy Settings** kısmına değinelim ;
+
+<i style="color:#ff4500;">**Proxy Settings**</i> 
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoXMqR_dVlFSFOrp82JLvwcX1Wveo-_6LglYGDszHDRqalWVT5jbSZyuNX1xG61J0S4mZ1M3sX7zLPAj8_PhwWIov6AYALB_tNfN_4jjo_H5siJdO7dstjjwjHPn5R5s96vzWj71x9JuXxY_5L5qpyOUWmGhqpeVVakY6j7hJRSLMt0ajnjzCKnuu1Wwml/s16000/28.png" height="" width="">
+
+<i style="color:#ff4500;">Proxy Listeners:</i>  Burp Suite'in Proxy modülünün merkezi bileşenlerinden biri "Proxy Listeners"dir. Bu, Burp Suite'in yerel ağ trafiğini dinlemek için kullandığı arayüzdür.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirJKgovTowFXSPyWRENkdg0Td_CxlSvcBK9iTZNvQJqfbnhkZr3MMAiCJJTzu-jFz9ojA2mU2YGILONNrIO9ReyNjzkBAHyhY1ybd2m8aB5Olvr4XkYcKra6iNmavA5s6KiEEJdpUQ87F2qmpPmg5MjYDIOaz38-H8stsr0SAf6Lev3CMV_JynFVBtSxcq/s16000/29.png" height="" width="">
+
+**"Burp Proxy uses listeners to receive incoming HTTP requests from your browser. You will need to configure your browser to use one of the listeners as its proxy server."**
+Bu ifade, Burp Proxy'nin tarayıcınızdan gelen HTTP isteklerini dinlemek için "listeners" (dinleyiciler) kullandığını belirtir. Etkili bir şekilde çalışması için tarayıcınızın, Burp'in dinlediği bir port ve adres üzerinden trafiği yönlendirmesi gerekmektedir.
+
+<i style="color:#ff4500;">Running:</i>  Bu sütun, belirli bir dinleyicinin şu anda çalışıp çalışmadığını gösterir.
+
+<i style="color:#ff4500;">Interface:</i>  Bu, dinleyicinin hangi ağ arayüzünde (genellikle bir IP adresi ve port kombinasyonu) çalıştığını gösterir. Örneğin, "127.0.0.1:8080" genellikle varsayılan yerel adres ve porttur.
+
+<i style="color:#ff4500;">Invisible:</i>  Bu mod, dinleyiciyi "şeffaf proxy" olarak çalıştırmanızı sağlar. Bu, hedef cihazın aslında bir proxy üzerinden bağlandığının farkında olmadığı anlamına gelir.
+
+<i style="color:#ff4500;">Redirect:</i>  Bu, gelen isteklerin başka bir sunucuya yönlendirilip yönlendirilmeyeceğini kontrol eder.
+
+<i style="color:#ff4500;">Certificate:</i>  Burp Proxy'nin, SSL/TLS üzerinden güvenli bağlantılar için hangi sertifikayı kullandığını gösterir.
+
+<i style="color:#ff4500;">TLS Protocols:</i>  Hangi TLS protokollerinin desteklendiğini belirtir. Bu, belirli bir web uygulamasının sadece belirli TLS sürümleriyle çalışması durumunda yararlıdır.
+
+<i style="color:#ff4500;">Support HTTP/3:</i>  Bu, dinleyicinin HTTP/3 protokolünü destekleyip desteklemediğini belirtir. HTTP/3, web performansını artırmak için tasarlanmış yeni bir protokoldür ve bazı modern web uygulamaları ve tarayıcılar tarafından desteklenmektedir.
+
+Bu tablo, Burp Suite içindeki farklı dinleyicilerin konfigürasyonlarını ve durumlarını hızla gözden geçirmenizi sağlar. Ayrıca, spesifik bir web uygulaması veya hedef için özelleştirilmiş dinleme yapılandırmaları oluşturmanıza olanak tanır.
+<br><br>
+
+<i style="color:#ff4500;">Request interception rules:</i>  Burp Suite, ağ trafiğini dinlerken hangi isteklerin "Intercept" sekmesinde durdurulup görüntüleneceğini ve düzenleneceğini kontrol etmenize olanak tanır. Bu özellik, belirli koşullara uyan istekleri ve yanıtları otomatik olarak yakalamak ve düzenlemek istediğinizde kullanılır. Özellikle, belirli bir hedefe veya belirli bir tür isteğe odaklanmak istediğinizde bu kurallar oldukça yararlıdır.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8T22F77bouKHNVGt9cQqEFe6p_M7YLQpUDkZPFVdeCbz9EvErjK0ZbZp-MU-rASgQlgvUhPL7cYJhjSdOGqSeUhuyh_OpUftkFrhNbRw7pJE5lQ9CqP8M7jbyKIFXZ8LT93CAFRsms-DMqfbPgn2jlL-sWuL_-NproZZ7ufmUmXV834uzSa2riXwo-a0a/s16000/30.png" height="" width="">
+
+**"Use these settings to control which requests are stalled for viewing and editing in the Intercept tab."**
+Bu ifade, "Request Interception Rules" bölümündeki ayarların, hangi isteklerin "Intercept" sekmesinde durdurulacağını kontrol etmek için kullanıldığını belirtir.
+
+**"Intercept requests based on the following rules: Master interception is turned off"**
+Bu seçenek, belirli kurallara göre isteklerin yakalanıp yakalanmayacağını belirtir. "Master interception" kapalıyken, Burp tüm istekleri otomatik olarak yakalar. Ancak bu özellik etkinleştirildiğinde, sadece belirli kurallara uyan istekler yakalanır.
+
+**"Automatically fix missing or superfluous new lines at end of request "**
+Bu özellik, bir isteğin sonunda eksik veya fazladan bulunan yeni satır karakterlerini otomatik olarak düzenler. HTTP istekleri ve yanıtları, başlangıç satırı, başlık alanları ve boş bir satırı takiben isteğin gövdesi olmak üzere belirli bir yapıya sahiptir. Boş bir satır (yani iki ardışık yeni satır karakteri), başlıkların sonunu ve gövdenin başlangıcını belirtir. Bu nedenle, doğru yapıya sahip olmayan istekler hedef sunucu tarafından yanlış yorumlanabilir. Bu özellik, bu tür yapısal hataları otomatik olarak düzelterek, manuel olarak istekleri düzenlerken yapılan hataların potansiyel etkilerini azaltır.
+
+**"Automatically update Content-Length header when the request is edited "**
+"Content-Length" başlığı, bir HTTP isteğinin veya yanıtının gövdesindeki bayt cinsinden uzunluğunu belirtir. Eğer bir isteğin içeriğini manuel olarak değiştirirseniz, bu başlığın değeri artık doğru olmayabilir. Bu başlığın yanlış bir değere sahip olması, sunucunun veya istemcinin isteği veya yanıtı yanlış yorumlamasına neden olabilir. Bu seçenek, isteğin içeriği düzenlendiğinde "Content-Length" başlığını otomatik olarak günceller, böylece isteğin doğru bir şekilde işlenmesini sağlar.
+
+Bu iki özellik, özellikle manuel test sırasında trafiği dinlerken ve düzenlerken kullanıcının hatalarını minimize etmeye yardımcı olur. Yapılan değişikliklerin doğru bir şekilde yorumlanmasını ve isteğin hedefine doğru bir şekilde ulaşmasını garanti eder. Bu, test sırasında karşılaşılan potansiyel sorunları azaltır ve test sürecini daha verimli hale getirir.
+
+<br><br>
+
+<i style="color:#ff4500;">Response interception rules:</i>  Aynı muhabbet biraz bakınca zaten anlıyorsunuz o yüzden bu kısmı geçiyorum 😊
+
+<br><br>
+
+<i style="color:#ff4500;">WebSocket interception rules:</i>  WebSocket, gerçek zamanlı uygulamalar için kullanılan bir iletişim protokolüdür. WebSockets, tam çift yönlü iletişim kanalları sağlar ve bu, HTTP'nin talep-yanıt mekanizmasından farklıdır. WebSocket'ler, özellikle oyunlar, ticaret uygulamaları ve sohbet platformları gibi gerçek zamanlı etkileşim gereksinimleri olan uygulamalarda sıkça kullanılır.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6anv5U0mNqBoOKrRFW3vZRu-ICSDJwxJlYkJUrhE_RH2t63FOiwkXQnV2uf8N4WKUMpUXiWoaHphed-GdcWphmUaJfD-JE02BX3K49lMIz9kAXg73Dnr_V2WhoTzAul_FzbZnE8lnTCNjCYGFvEw9Wy8CsmUsETkCxJqEZiYOI86dH-LAoOWKm9F5FEiv/s16000/31.png" height="" width="">
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Intercept client-to-server messages: </i> Bu seçenek, istemciden sunucuya giden WebSocket mesajlarının yakalanmasını ve Intercept sekmesinde durdurulmasını sağlar. Bu, bir güvenlik uzmanının, istemciden sunucuya giden veriyi manuel olarak incelemesine, değiştirmesine veya manipüle etmesine olanak tanır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Intercept server-to-client messages: </i> Bu seçenek, sunucudan istemciye dönen WebSocket mesajlarını yakalamak için kullanılır. Sunucudan gelen veriyi incelemek ve değiştirmek, bir güvenlik uzmanının sunucunun nasıl tepki verdiğini görmesine ve bu tepkileri manuel olarak değiştirerek potansiyel güvenlik açıklıklarını belirlemesine yardımcı olabilir. Genel olarak, WebSockets interception kuralları, WebSockets trafiğini gerçek zamanlı olarak incelemek ve manipüle etmek isteyen güvenlik profesyonelleri için oldukça yararlıdır. Bu, özellikle gerçek zamanlı uygulamalarda potansiyel güvenlik sorunlarını belirlemek için kritik bir özelliktir.
+<br><br>
+
+<i style="color:#ff4500;">Response modification rules:</i>  Burp Suite'in bu bölümü, web uygulamalarının sunucudan istemciye gönderdiği yanıtları otomatik olarak nasıl değiştireceğini kontrol etmek için kullanılır. Bu, belirli güvenlik testleri sırasında yanıtları değiştirerek uygulamanın farklı senaryolara nasıl tepki verdiğini gözlemlemek için kullanılır.
+
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9HPDmmBomnqir8vqIzw-LFv9LUhbDvkm66CCeVvvxVhfRrZvBDeUzofNRAZtOkDv4eA0lvD4sOM4fe81HAlB_jW4hnuQgW6MFAQgO9a7f6VNWtCulluJyomLvkSZRN1_-RE9Dp78WiwD8Q3zf1AIld-jM33hBJBrCgJBNehhWhHXSo-0xaeXgowY7LK9J/s16000/32.png" height="" width="">
+
+**“Use these settings to control how Burp automatically modifies responses”**
+Bu açıklama, kullanıcının yanıtları otomatik olarak nasıl değiştireceğine dair ayarları yapabileceğini belirtir.
+
+Aşağıda verilen seçeneklerin her biri, bir web uygulamasının sunucudan dönen yanıtını belirli bir şekilde değiştirmek için kullanılır:
+
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Unhide hidden form fields: </i> Bu seçenek, istemciden sunucuya giden WebSocket mesajlarının yakalanmasını ve Intercept sekmesinde durdurulmasını sağlar. Bu, bir güvenlik uzmanının, istemciden sunucuya giden veriyi manuel olarak incelemesine, değiştirmesine veya manipüle etmesine olanak tanır.
+
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Prominently highlight unhidden fields: </i> Gizliliği kaldırılan form alanlarını belirgin bir şekilde vurgular. Bu, testerin hangi alanların değiştirildiğini hızla tespit etmesine yardımcı olur.
+
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Enable disabled form fields: </i> Devre dışı bırakılmış form alanlarını etkinleştirir. Bu, bazı alanların neden devre dışı bırakıldığını anlamak ve bu alanlar üzerinde testler yapmak için kullanılır.
+
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Remove input field length limits:  </i> Form alanlarının giriş uzunluk sınırlamalarını kaldırır. Bu, uzun veri girişlerinin bir uygulamaya nasıl etki ettiğini test etmek için kullanılır.
+
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Remove JavaScript form validation: </i> JavaScript ile gerçekleştirilen form doğrulamasını kaldırır. Bu, sunucu tarafı doğrulamanın nasıl çalıştığını anlamak için kullanılır.
+
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Remove all JavaScript: </i> Yanıttaki tüm JavaScript kodlarını kaldırır. Bu, JavaScript'ten bağımsız olarak bir uygulamanın nasıl çalıştığını görmek için kullanılır.
+
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Remove <object> tags: </i> Yanıttaki tüm <object> etiketlerini kaldırır. Bu, bu tür etiketlerin uygulama üzerindeki potansiyel etkilerini analiz etmek için kullanılır.
+
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Convert HTTPS links to HTTP:  </i> Yanıtlardaki HTTPS bağlantılarını HTTP'ye dönüştürür. Bu, bir uygulamanın şifrelenmemiş bağlantılara nasıl tepki verdiğini görmek için kullanılır.
+
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Remove secure flag from cookies:  </i> Çerezlerden güvenli bayrağını kaldırır. Bu, bir çerezin güvenli olmayan bir bağlantı üzerinden nasıl iletilip iletilmediğini kontrol etmek için kullanılır.
+
+<br><br>
+
+<i style="color:#ff4500;">Match and replace rules:</i> Bu bölüm, Burp Suite Proxy içinden geçen istek ve yanıtların belirli bölümlerinin otomatik olarak nasıl değiştirileceğini kontrol eder. Özellikle, belirli desenleri eşleştiren ve belirli bir değerle değiştiren kuralları tanımlamanıza olanak tanır.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqVC9E6i_xcsCx5ejwOhODXVEN1sypiub6-PQ73D_qeBxr2KzKv0H_Ox4aSw2ZgrIc4DdR7IkhKZjmC3ONwTDE2LBPElGdPT-AfJwBl7RoC0Q8dRZJ2ap6eLnoVA-Wl4G_B-MkXtS_NuYWH2tkDghs0N03F-35K7wZXvsaePuLOSH9y_SgXHPFYYSMAQS4/s16000/33.png" height="" width="">
+
+**“Use these settings to automatically replace parts of requests and responses passing through the Proxy”**
+Bu cümle, bu bölümün, Burp Suite Proxy'den geçen istek ve yanıtların spesifik kısımlarını otomatik olarak nasıl değiştireceğine dair ayarları yapılandırmanıza yardımcı olacağını belirtir.
+
+<br><br>
+
+<i style="color:#ff4500;">TLS pass through:</i> Burp Suite'in "TLS Pass Through" özelliği, belirli hedef web sunucuları için TLS bağlantılarının doğrudan geçirilmesini sağlar. Bu, belirli sunucularla yapılan bağlantıların Burp Proxy tarafından engellenmeden doğrudan kurulmasına olanak tanır. Bu, özellikle belirli sunucularla SSL/TLS bağlantısı kurarken yaşanan sorunlarda veya belirli bir sunucuyla yapılan trafiği incelemek istemediğinizde faydalıdır.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLRlopk90-AY_TlMtds3eZTOuB-vwQ3LVFU2ViyRsk5DPaS6tdgShh7eaRd6uOskFfopDLRNf3Cg8wuOkECmTXgf2pJwOsEfP-MMtoLHAO_5LiMfr3bxVlrS1h2nrpZQdp-DcKQSRmIF5FMLq1AmFq0ZaHxdSgjTroyCKEwuerLPpI0JK4QaJ0NoqiQwuo/s16000/34.png" height="" width="">
+
+Bağlantılar doğrudan geçirildiğinde, bu bağlantılardan geçen istek veya yanıtların detayları Proxy'de görüntülenmez. Yani, eğer bir web sunucusunu bu listeye eklerseniz, bu sunucuyla olan trafiğinizi Burp Suite içinde göremezsiniz.
+
+**Enabled:** Bu, belirli bir kuralın aktif olup olmadığını belirtir. Eğer bu kutucuk işaretliyse, belirli IP aralığı veya host için TLS trafiği doğrudan geçirilir.
+**Host / IP range:** Burada hangi web sunucusu veya IP aralığının TLS trafiğinin doğrudan geçirileceğini belirtirsiniz.
+**Port:** TLS trafiğinin hangi port üzerinden geçirileceğini belirtir. Örneğin, standart HTTPS portu 443'tür.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Automatically add entries on client TLS negotiation failure:</i> Eğer bu seçenek işaretliyse, bir TLS müzakere hatası oluştuğunda, hataya neden olan sunucu otomatik olarak "TLS Pass Through" listesine eklenir. Bu, bazı SSL/TLS sorunlarıyla karşılaşıldığında trafiği hızla doğrudan geçirerek sorunların üstesinden gelmeye yardımcı olabilir.
+
+<br><br>
+
+<i style="color:#ff4500;">Proxy history logging:</i> Burp Suite'in "Proxy History Logging" özelliği, Proxy'nin kapsam dışı kalan öğeleri geçmişe ve diğer araçlara otomatik olarak gönderip göndermemesi gerektiğini seçmenizi sağlar. Bu, özellikle belirli bir hedef veya etki alanı üzerinde çalışırken, diğer gereksiz trafiği filtrelemek ve odaklanmak istediğiniz trafiği gözlemlemek için oldukça yararlıdır.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrFSkodK8738tASxY56wZWIWX1lcjXmsN4uG8URoU8iFxpRAnaQnLO_PNz8F_vK2jFRJZ5upVYTJbUhi9sPpOqk62pAYj0zqv1os0RfSkDHuubOCPqGoXlX5aj0TWdban4uclbzlLUUlH7kdxOFjuLvDYujCO0m1yZbqnvYFHeWs7aQWf5zgxdtay9TsZu/s16000/35.png" height="" width="">
+
+Target kapsamına bir öğe eklediğinizde, bu ayar Proxy'nin kapsam dışı kalan öğeleri geçmişe ve diğer araçlara nasıl yönlendireceğini belirlemenizi sağlar. Bu, özellikle belirli bir hedefe odaklanmak istediğinizde trafiği sınırlamak için kullanılır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Stop logging out-of-scope items:</i> Bu seçenek seçildiğinde, kapsam dışı kalan öğeler otomatik olarak geçmişe ve diğer araçlara gönderilmez. Bu, gereksiz trafiği azaltmanıza yardımcı olabilir.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Ask me what to do each time: </i> Bu seçeneği seçerseniz, her kapsam dışı öğe için ne yapılması gerektiğine dair bir uyarı alırsınız. Bu, belirli durumlarda daha granüler bir kontrol sağlar.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Do nothing: </i> Bu seçenek seçildiğinde, Proxy kapsam dışı öğeleri normal şekilde geçmişe ve diğer araçlara göndermeye devam eder. Bu, tüm trafiği gözlemlemek istediğinizde kullanılır.
+
+<br><br>
+
+<i style="color:#ff4500;">Default Proxy interception state:</i> Bu bölüm, Burp Suite'u başlattığınızda Proxy'nin trafiği yakalama (interception) durumunu nasıl başlatmak istediğinizi belirlemenizi sağlar. Bu özellik, sık sık aynı konfigürasyonları kullanıyorsanız veya belirli bir duruşla Burp'u başlatmak istiyorsanız oldukça kullanışlıdır.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwAVb3NjuL-YpPvlKSRwnbapEcd0_oCdLmQaqEGkLRSGwSG0bmx2K2VzCg2ec1f9MEp3Mf2jFfABNTSNQYhEYSn7v2KRg1O83bFDykQH5kQARJ1NCKEqckTgaj5av3sc7vW82Sns2Xn-LpoGfvx9M3xziqTop_URsJOssAOnhFXD66BzSjVJhq5dxmi_2L/s16000/36.png" height="" width="">
+
+Burp Suite'i başlattığınızda, Proxy'nin trafiği otomatik olarak yakalayıp yakalamayacağını (intercept) veya son kapatıldığında hangi durumdaydıysa o durumu sürdürüp sürdürmeyeceğini seçebilirsiniz. Bu, sık sık farklı test senaryoları arasında geçiş yapıyorsanız, her seferinde ayarları manuel olarak değiştirmek zorunda kalmadan hızlıca başlamak için oldukça kullanışlıdır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Enable Interception: </i> Bu seçeneği seçerseniz, Burp Suite'i her başlattığınızda trafiğin otomatik olarak yakalanmasını (intercept) sağlar. Bu, aktif olarak bir web uygulamasının trafiğini incelemek istediğinizde kullanışlıdır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Disable Interception: </i> Bu seçenek seçildiğinde, Burp Suite'u başlattığınızda otomatik olarak trafiği yakalamaz. Genel gözlem veya belirli bir hedef olmadan tarama yapmak istediğinizde bu seçenek kullanılır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Restore the settings that was selected in the Proxy > Bu seçeneği seçerseniz, Burp'u son kapatışınızdaki konfigürasyonla başlatır. Yani, eğer trafiği yakalama modunda kapatıldıysa, bu modda başlatır; yakalama modunda değilse, yakalama modunda başlamaz. Bu seçenek, önceki oturumunuzdaki çalışma durumunuzu sürdürmek istediğinizde kullanılır.
+<br><br>
+
+<i style="color:#ff4500;">Miscellaneous:</i> Bu bölüm, Burp Proxy'nin varsayılan davranışını özelleştirmek için bir dizi seçeneği içerir. Bu seçenekler, belirli test senaryolarınıza veya karşılaştığınız özel durumlara göre Burp Suite'in davranışını ince ayar yapmanıza olanak tanır.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5hZLHuwwnIMXhxk-vuPgoa9VTqW1eEZmTNwY4d8Ajkzg2LOq3g4ZxhRcb7GoLzH9UJunjlkzDocTuhNFpeGEju3ipg_laSSmJBN4K3Vu3_UDV8gp54_uONj6uPysUXvfDxevOkS4QA0drXBTc0olYDeO4gTqIfd5Jb_wSQWWLzgxSIukYnXsKbbLH8vQF/s16000/37.png" height="" width="">
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Use http/1.0 in requests to server:</i> Bu seçenek, sunucuya yapılan isteklerde HTTP/1.0 protokolünün kullanılmasını zorlar.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Use http/1.0 in responses to client: </i> Cevaplar için HTTP/1.0 protokolünün kullanılmasını zorlar.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Set response header “Conection:close”:</i> Bu, sunucudan dönen yanıtlarda "Connection: close" başlığının ayarlanmasını sağlar, böylece bağlantının her yanıttan sonra kapatılmasını zorlar.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Set ‘Connection’ header on incoming requests when using HTTP/1: </i> Gelen isteklerde HTTP/1 kullanılırken "Connection" başlığını ayarlar.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Strip Proxy-* headers in incoming requests: </i> Gelen isteklerde bulunan ve "Proxy-*" ile başlayan HTTP başlıklarını kaldırmak için kullanılır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Remove unsupported encoding from Accept-Encoding headers in incoming requests:</i> Gelen isteklerdeki "Accept-Encoding" başlıklarından desteklenmeyen kodlamaları kaldırır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Strip Sec-WebSocket-Extensions headers in incoming requests:</i> Gelen isteklerdeki "Sec-WebSocket-Extensions" başlıklarını kaldırır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Unpack gzip/deflate in requests:</i> İsteklerde sıkıştırılmış içeriği (gzip veya deflate kullanılarak) açar.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Unpack gzip/deflate in responses:</i> Yanıtlarda sıkıştırılmış içeriği (gzip veya deflate kullanılarak) açar.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Disable web interface at http://burpsuite:</i> http://burpsuite adresindeki web arayüzünü devre dışı bırakır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Suppress Burp error messages in browser:</i> Tarayıcıda görünen Burp hata mesajlarını bastırır.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Don’t send items to Proxy history or live tasks:</i> Öğelerin Proxy geçmişine veya canlı görevlere gönderilmesini engeller.
+
+<i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Don’t send items to Proxy history or live tasks, if out of scope:</i> Eğer öğeler kapsam dışındaysa, Proxy geçmişi veya canlı görevlere gönderilmesini engeller.
+
+<br><br><br>
+
+<h1 style="color:yellow;">INTRUDER EKRANI</h1>
+
+
+
+
+
+
+
 
 
 
