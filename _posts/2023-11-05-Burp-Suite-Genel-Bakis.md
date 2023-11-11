@@ -451,8 +451,29 @@ Bu bölüm, Burp Suite içinde çalışırken hangi hedeflerin aktif olarak dikk
 <i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Use Suite Scope:</i> Genel suite kapsamını kullanır. Bu, global ayarlarınıza dayanarak kapsam dışı isteklerin nasıl ele alınacağını belirtir.
 
 <i style="color:#ff4500;">&nbsp;&nbsp;&nbsp;•	Use Custom Scope:</i> Spesifik bir tarama için özel kapsam tanımlar. Bu, belirli bir görev için global kapsam ayarlarınızdan farklı bir kapsamda çalışmanıza olanak sağlar.
+<br><br><br>
 
+<h1 style="color:yellow;">PROXY EKRANI</h1>
 
+Burp Suite'in Proxy modülü, bir güvenlik uzmanının oyun alanıdır. Intercept özelliği sayesinde uygulama ve sunucu arasında geçen trafik anında yakalanabilir, incelenebilir ve hatta modifiye edilebilir. Bu, potansiyel güvenlik açıklarını keşfetme ve hedef uygulamanın tepkilerini test etme yeteneği kazandırır.
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcDcBOow9TPfaAecwg9TzAwqovH2OtiEc5kaDa9dHVaWb_w3GR8psHmHCnuuTv49nVa-UCC71y79KWe2XbU9WqXz3N-gpTydgXa1liFAOiA_ymyXU6Udsf55Np4SWnfrC2SGOIHWppJa3m9aDkqFjpjGsTarw5CrqvGN6HLpBceeQHexQDdkIFLNabBnuk/s16000/27.png" height="" width="">
+
+<i style="color:#ff4500;">Intercept: </i> HTTP(S) trafiğini gerçek zamanlı olarak ele geçirme yeteneği, bir pentester için altın değerindedir. Man-in-the-Middle (MitM) saldırı senaryolarını simüle ederken, istekleri ve yanıtları değiştirerek hedef uygulamanın nasıl tepki verdiğini gözlemlemek kritiktir.
+
+<i style="color:#ff4500;">HTTP History & WebSockets History: </i> Bu kayıtlar, yapılan tüm hareketleri incelemek için idealdir. Özellikle WebSockets, modern web uygulamalarının dinamik içerik aktarma yöntemidir. Bu protokol üzerindeki potansiyel açıklıklar, kritik bilgilere erişim kazandırabilir.
+
+<i style="color:#ff4500;">Forward (ileri):</i> Bu buton, Intercept modunda yakaladığınız bir isteği veya yanıtı orijinal hedefine doğru ilerletmenizi sağlar. Özellikle bir istek üzerinde değişiklik yaptıktan sonra bu değişikliği uygulamaya veya sunucuya göndermek istediğinizde bu butonu kullanırsınız.
+
+<i style="color:#ff4500;">Drop (Bırak): </i> Yakalanan bir isteği veya yanıtı hedefine ulaşmadan iptal etmek istediğinizde bu butonu kullanırsınız. Bu, belirli bir isteği veya yanıtı test etmek istemediğinizde veya bir süreci durdurmak istediğinizde kullanışlıdır.
+
+<i style="color:#ff4500;">Intercept Off (Yakalamayı Kapat): </i> Bu seçenek, Intercept modunun aktif olup olmadığını kontrol eder. Intercept aktifken, istekler ve yanıtlar gerçek zamanlı olarak yakalanır. Eğer trafiği sürekli olarak gözlemlemek istemiyorsanız bu özelliği kapatabilirsiniz.
+
+<i style="color:#ff4500;">Intercept On (Yakalamayı Aç): </i> Bu özellik, Burp Suite'in Proxy modülünde trafiği gerçek zamanlı olarak yakalamasını sağlar. Aktif olduğunda, tarayıcınız ve hedef web sunucusu arasında gerçekleşen tüm HTTP ve HTTPS trafiği yakalanır. Yakalama süreci, analiz, modifikasyon ve trafiği değiştirme gibi birçok aktivite için oldukça kullanışlıdır.
+
+<i style="color:#ff4500;">Action (Eylem): </i> "Action" menüsü, yakalanan istek veya yanıt üzerinde çeşitli eylemleri gerçekleştirmenize olanak tanır. Bu eylemler arasında, isteği farklı bir araçla (örn. Repeater, Intruder) gönderme, isteği kaydetme veya analiz için bir not eklemek gibi seçenekler bulunur.
+
+<i style="color:#ff4500;">Open Browser (Tarayıcıyı Aç): </i> Bu özellik, yakalanan bir isteği doğrudan Burp Suite içerisinde bulunan yerleşik tarayıcıyla açmanıza imkan tanır. Bu sayede, bir isteğin sonucunu doğrudan görsel olarak kontrol edebilir ve belirli bir web sayfasının nasıl göründüğünü analiz edebilirsiniz.
 
 
 
