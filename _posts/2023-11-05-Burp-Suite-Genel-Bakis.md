@@ -662,6 +662,8 @@ Burp Suite'i başlattığınızda, Proxy'nin trafiği otomatik olarak yakalayıp
 
 <h1 style="color:yellow;">INTRUDER EKRANI</h1>
 
+Burp Intruder, hedef uygulamaya otomatik olarak saldırmak için kullanılır. Intruder'ın "Positions" sekmesi, hangi kısımların değiştirileceğini belirttiğimiz yerdir. Burada belirttiğimiz her bir yere bir "payload" ekleyeceğiz.
+Öncelikle, bir HTTP isteğini "Proxy" sekmesinden yakalayıp "Send to Intruder" seçeneği ile Intruder'a göndermeliyiz. Ardından "Positions" sekmesini açarak, otomatik olarak eklenmiş olan § işaretlerini görebiliriz. Bu işaretler, Burp Suite'in otomatik olarak belirlediği payload pozisyonlarıdır. İhtiyacımıza göre bu işaretleri kaldırabilir, değiştirebilir ya da yeni pozisyonlar ekleyebiliriz.
 
 
 
