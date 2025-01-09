@@ -1,7 +1,7 @@
-title: Python4Hackers Blog
-email: python4hackers@protonmail.com
+title: HackLogs Blog
+email: hacklogs@protonmail.com
 description: Siber Güvenlik Falan Filan
-url: https://python4hackersblog.github.io
+url: https://hacklogs.github.io
 plugins:
     - jekyll-seo-tag
     - jekyll-relative-links
@@ -13,5 +13,5 @@ highlighter: rouge
 paginate: 7
 paginate_path: /page:num/
 twitter:
-    username: python4hackers
+    username: hacklogs
     card: summary
