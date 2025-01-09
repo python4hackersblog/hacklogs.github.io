@@ -1,17 +1,15 @@
 title: HackLogs Blog
 email: hacklogs@protonmail.com
 description: Siber Güvenlik Falan Filan
-url: https://hacklogs.github.io
+url: https://hacklogs.com
+baseurl: ""
 plugins:
-    - jekyll-seo-tag
-    - jekyll-relative-links
-    - jekyll-paginate
-relative_links:
-    enabled: true
-    collections: true
+  - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-paginate
 highlighter: rouge
 paginate: 7
 paginate_path: /page:num/
 twitter:
-    username: hacklogs
-    card: summary
+  username: hacklogs
+  card: summary
