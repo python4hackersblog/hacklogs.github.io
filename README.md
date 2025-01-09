@@ -1,1 +1,1 @@
-# python4hackersblog.github.io
+# hacklogs.github.io
